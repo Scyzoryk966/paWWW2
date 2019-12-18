@@ -1,26 +1,23 @@
-<svg width="350" height="110" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-    <g>
-        <title>Layer 1</title>
-        <g id="svg_3">
-<!--            Prostokącik!-->
-            <rect stroke="#f39422" ry="5" rx="5" id="svg_13" height="95" width="154.00001" y="7.456911" x="187.91525"
-                  stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="#f39422"/>
-<!--            text: ost-->
-            <text fill="#ffffff" stroke-width="null" x="89.053567" y="147.30377" id="svg_1" font-size="24"
-                  font-family="Sans-serif" text-anchor="middle" xml:space="preserve" font-weight="bold"
-                  transform="matrix(3.269451496050812,0,0,3.449489291253937,-173.31795831374762,-423.26477783283997) "
-                  stroke="#ffffff">ost</text>
-<!--            text: P-->
-            <text font-weight="bold" stroke="#ffffff"
-                  transform="matrix(3.4808474046358238,0,0,3.4599857083054526,-95.15931800103576,-326.8044688282604) "
-                  xml:space="preserve" text-anchor="middle" font-family="Sans-serif" font-size="24" id="svg_10"
-                  y="119.021588" x="37.678379" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null"
-                  stroke-width="null" fill="#ffffff">P</text>
-<!--            text: hub-->
-            <text id="svg_2" fill="#ffffff" stroke-width="null" x="134.042849" y="146.479369" font-size="24"
-                  font-family="Sans-serif" text-anchor="middle" xml:space="preserve" font-weight="bold"
-                  transform="matrix(3.269451496050812,0,0,3.449489291253937,-173.31795831374762,-423.26477783283997) "
-                  stroke="#ffffff">hub</text>
-        </g>
-    </g>
+<svg width="758" height="291.5" xmlns="http://www.w3.org/2000/svg">
+ <style>.st0{fill:#d4b830}.st1,.st2{opacity:.986;fill:#ebebeb;fill-opacity:0;enable-background:new}.st2{fill-opacity:.9216}.st3{fill:#fdd83c}</style>
+ <defs>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_1_blur">
+   <feGaussianBlur stdDeviation="1.5" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="293.5" width="760" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g stroke="null" id="g5193">
+   <path stroke="null" d="m23.788,262.014998l-23.8,-262l256.4,0.1l-23.6,261.7l-104.8,29.6l-104.2,-29.4zm189.7,-14.3l19.9,-224.4l-105,0l0.8,247.5l84.3,-23.1zm-94.9,-191.5l-25.5,0l-0.3,134.3l-49.5,-13.5l0.1,30.7l75.2,20.3l0,-171.8z" class="st0" id="path5113"/>
+   <path stroke="null" d="m110.188,225.514998c-3.3,-1 -19.6,-5.4 -36.2,-9.9l-30.1,-8.1l0,-15.1c0,-14.8 0,-15.1 1.5,-14.6c0.8,0.3 11.8,3.3 24.4,6.8l22.9,6.3l0.2,-67l0.2,-67l25,0l0,85.2c0,67.7 -0.2,85.2 -0.9,85.2c-0.5,-0.1 -3.7,-0.9 -7,-1.8z" class="st1" id="path5159"/>
+   <path stroke="null" d="m43.388,207.714998l-0.1,-30.7s31.6,8.9 49.5,13.5l0.3,-134.2l25.5,0l0,171.7l-75.2,-20.3z" class="st2" id="path5157"/>
+   <path stroke="null" d="m128.388,23.214998l105,0l-19.9,224.4l-85.1,23.1l0,-247.5zm79.7,186.8l6.9,-83.9l-51,5.7l0,-44.8l54.4,-0.2l2.2,-30.6l-82.1,0.4l1.1,111.4l49.6,-8.5l-0.7,24.8l-50,13.3l0.5,30.4l69.1,-18z" class="st3" id="path5117"/>
+  </g>
+  <text filter="url(#svg_1_blur)" font-weight="bold" stroke="#000" transform="matrix(4.238883629348038,0,0,4.411925851843874,-723.0944508235541,-401.45826722303826) " xml:space="preserve" text-anchor="start" font-family="'Trebuchet MS', Gadget, sans-serif" font-size="24" id="svg_1" y="129.486384" x="230.341221" stroke-width="0" fill="#000000">JavaScript</text>
+  <text font-weight="bold" stroke="#000" transform="matrix(4.238883629348038,0,0,4.411925851843874,-723.0944508235541,-401.45826722303826) " xml:space="preserve" text-anchor="start" font-family="'Trebuchet MS', Gadget, sans-serif" font-size="24" id="svg_2" y="129.713043" x="230.577132" stroke-width="0" fill="#ffffff">JavaScript</text>
+ </g>
 </svg>
