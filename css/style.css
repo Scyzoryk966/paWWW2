@@ -6,16 +6,6 @@
 #f39422 - zółto-pomarańczowy
 */
 
-body {
-    color: black;
-    font-family: Tahoma, serif;
-    font-size:calc(12px + 0.3vw);
-    line-height: 1em;
-    background: linear-gradient(to bottom right, #fff051, #a88f0f) no-repeat center center fixed;
-                -moz-linear-gradient(to bottom right, #fff051, #a88f0f) no-repeat center center fixed;
-                -webkit-linear-gradient(to bottom right, #fff051, #a88f0f) no-repeat center center fixed;
-    background-size: cover;
-}
 
 .main-content{
  margin:1%;
@@ -50,11 +40,11 @@ body {
 
 .nav-item {
     font-size: 1.5em;
+    line-height: 1.2em;
     text-shadow: 1px 1px 5px black;
 }
 
 .page-footer{
-    color: white;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 15px;
     margin: 1% 0 1% 0;

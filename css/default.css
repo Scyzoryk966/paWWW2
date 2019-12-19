@@ -1,0 +1,15 @@
+body {
+    color: black;
+    font-family: Tahoma, serif;
+    font-size:calc(12px + 0.3vw);
+    background: linear-gradient(to bottom right, #fff051, #a88f0f) no-repeat center center fixed;
+                -moz-linear-gradient(to bottom right, #fff051, #a88f0f) no-repeat center center fixed;
+                -webkit-linear-gradient(to bottom right, #fff051, #a88f0f) no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+
+.page-footer {
+    color: white;
+}
