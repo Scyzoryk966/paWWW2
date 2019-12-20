@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+		<link rel="stylesheet" href="../css/style.css" type="text/css"/>
+		<link rel="shortcut icon" href="../img/logo.png"/>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="Description" content="Strona z podstawami JavaScript zrobiona na zaliczenie.">
+		<script src="../js/scripts.js" defer></script>
+		<title>JavaScript - Operatory</title>
+		<!--Syntax!-->
+		<style>
+				table {
+						width: 80%;
+						padding: 5px;
+						margin-left: auto;
+						margin-right: auto;
+						margin-bottom: 30px;
+				}
+
+				td, tr {
+						font-size: 1em;
+						padding: 10px;
+						border-bottom: solid #cbc8cb;
+				}
+
+				th {
+						background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)) center center;
+						font-size: 1.8em;
+						padding: 8px;
+						font-family: Tahoma, sans-serif;
+				}
+
+				td.colspan {
+						text-align: center;
+						font-size: 1.2em;
+				}
+
+				td:nth-child(3n+1) {
+						background-color: rgba(0, 0, 0, 0.5);
+				}
+
+				td:nth-child(3n+2) {
+						background-color: rgba(0, 0, 0, 0.25);
+				}
+
+				@media screen and (max-width: 1000px) {
+						table {
+								padding: 1px;
+								font-size: 1.8em;
+						}
+				}
+		</style>
+</head>
+<body onload="startTime()">
+<header>
+		<a href="../index.html"><img src="../img/logo.svg" alt="home page logo"
+									 onerror="this.onerror=null;this.src='img/logo.png'"></a>
+</header>
+<main class="zaokTOP">
+		<nav class="zaokTOP">
+				<a href="../index.html">Zadania</a>
+				<a href="../inne/indexskr.html">Skrypty</a>
+				<a href="kontakt.html">Kontakt</a>
+				<a href="../podstrony/dodatki.html">Dodatki</a>
+		</nav>
+		<h1>Operatory</h1>
+		<span class="ref">Żródło: <a target="_blank" href="http://javascript.xn--rzeniczak-sbc.pl/02lekc2.php">
+				javascript.xn--rzeniczak-sbc.pl</a></span>
+		<p>W dwóch powyższych linijkach kodu użyliśmy operatora + łączenia stringów. Dzięki niemu możemy
+				wypisywać złożone zdania, zmieniające się w zależności od zmiennych. Jeżeli przy łączeniu
+				różnych typów zmiennych występuje string i operator łączenia +, pozostałe zmienne są
+				przekształcane również na string.
+
+				Zestawienie operatorów używanych w JavaScript:</p>
+
+		<table>
+				<tr>
+						<th>Operator</th>
+						<th>Opis</th>
+						<th>Przykłady</th>
+				</tr>
+				<tr>
+						<td colspan="3" class="colspan">Porównania</td>
+				</tr>
+				<tr>
+						<td>==</td>
+						<td>jest równe</td>
+						<td>2==3 wynik: fałsz</td>
+				</tr>
+				<tr>
+						<td>!==</td>
+						<td>nie jest równe</td>
+						<td>2!=3 wynik: prawda</td>
+				</tr>
+				<tr>
+						<td>&gt;</td>
+						<td>jest większe</td>
+						<td>2&gt;3 wynik: fałsz</td>
+				</tr>
+				<tr>
+						<td>&lt;</td>
+						<td>jest mniejsze</td>
+						<td>2&lt;3 wynik: prawda</td>
+				</tr>
+				<tr>
+						<td>&gt;=</td>
+						<td>mniejsze lub równe</td>
+						<td>2&gt;=3 wynik:fałsz</td>
+				</tr>
+				<tr>
+						<td>&lt;=</td>
+						<td>większe lub równe</td>
+						<td>3&lt;=3 wynik: prawda</td>
+				</tr>
+				<tr>
+						<td colspan="3" class="colspan">Przypisania</td>
+				</tr>
+				<tr>
+						<td>=</td>
+						<td>x=y</td>
+						<td></td>
+				</tr>
+				<tr>
+						<td>+=</td>
+						<td>x+=7</td>
+						<td>x=x+7</td>
+				</tr>
+				<tr>
+						<td>-=</td>
+						<td>x-=7</td>
+						<td>x=x-7</td>
+				</tr>
+				<tr>
+						<td>*=</td>
+						<td>x*=y</td>
+						<td>x=x+y</td>
+				</tr>
+				<tr>
+						<td>/=</td>
+						<td>x/=y</td>
+						<td>x=x/y</td>
+				</tr>
+				<tr>
+						<td>%=</td>
+						<td>x%=y</td>
+						<td>x=x%y</td>
+				</tr>
+				<tr>
+						<td colspan="3" class="colspan">Logiczne</td>
+				</tr>
+				<tr>
+						<td>&amp;&amp;</td>
+						<td>i</td>
+						<td>true &amp;&amp; true = prawda<br>true $$ false = fałsz</td>
+				</tr>
+				<tr>
+						<td>||</td>
+						<td>lub</td>
+						<td>true || false = prawda</td>
+				</tr>
+				<tr>
+						<td>!</td>
+						<td>zaprzeczenie</td>
+						<td>!true = fałsz</td>
+				</tr>
+		</table>
+		<section style=" height: 1em;"></section>
+</main>
+<aside class="bottom zaokTOP">
+		<aside id="breadcrumb" class="top zaokTOP">Tu jesteś:</aside>
+		<p>
+				<span> &raquo; </span>
+				<a href="../index.html">Strona główna</a>
+				<span> &raquo; </span>
+				<a href="#">Operatory</a>
+		</p>
+</aside>
+<aside class="bottom zaokTOP">
+		<aside class="top zaokTOP">Zegar</aside>
+		<div id="zegar"></div>
+</aside>
+<footer><p>Damian Szefler Copyright 2019</p>
+		<a href="https://www.facebook.com/"><img src="../img/fb.png" alt="Facebook"/></a>
+		<a href="https://www.youtube.com/"><img src="../img/yt.png" alt="YouTube"/></a>
+		<a href="https://www.twitter.com/"><img src="../img/tw.png" alt="Twitter"/></a>
+		<a href="https://www.github.com/scyzoryk966"><img src="../img/github.png" alt="Mój Github"
+														  style="filter: invert(100%)"/></a>
+</footer>
+</body>
+</html>

@@ -2,14 +2,12 @@ body {
     color: black;
     font-family: Tahoma, serif;
     font-size:calc(12px + 0.3vw);
-    line-height: 1em;
     background: url("../img/gray.jpg");
     background-size: cover;
-    backdrop-filter: grayscale(0.5);
 }
-.navbar-brand img{
-    /*filter: grayscale(1) invert(0.8);*/
-}
+
+
+
 .page-footer {
     color: white;
 }

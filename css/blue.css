@@ -2,7 +2,6 @@ body {
     color: black;
     font-family: Tahoma, serif;
     font-size:calc(12px + 0.3vw);
-    line-height: 1em;
     background: linear-gradient(to bottom right, #376db6, #0b2c63) no-repeat center center fixed;
                 -moz-linear-gradient(to bottom right, #fff051, #a88f0f) no-repeat center center fixed;
                 -webkit-linear-gradient(to bottom right, #fff051, #a88f0f) no-repeat center center fixed;

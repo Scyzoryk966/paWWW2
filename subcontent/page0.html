@@ -1,10 +1,37 @@
-<div class="row">
-		<div class="col-md-9">
-				<div class="bg-light p-5 rounded-lg"><h1>Witam na stronie głownej</h1>
-						<h1>główny content</h1>
-				</div>
-		</div>
-		<div class="col-md-3">
-				<div class="bg-light p-5 rounded-lg"><h2>to powinno być menu z boku</h2></div>
-		</div>
-</div>
+<section class="row">
+		<section class="col-md-9">
+				<section class="bg-light p-5 rounded-lg">
+						<h1 class="text-center">Menu</h1>
+						<section class="list-group menu">
+								<a class="list-group-item" href="podstrony/umieszczanie.html">Umieszczanie skryptu w pliku HTML.</a>
+								<a class="list-group-item" href="podstrony/write.html">Instrukcja document.write</a>
+								<a class="list-group-item" href="podstrony/dialog.html">Okna dialogowe.</a>
+								<a class="list-group-item" href="podstrony/var.html">Zmienne.</a>
+								<a class="list-group-item" href="podstrony/operatory.html">Operatory.</a>
+								<a class="list-group-item" href="podstrony/if.html">Instrukcja warunkowa.</a>
+								<a class="list-group-item" href="podstrony/for.html">Pętla for.</a>
+								<a class="list-group-item" href="podstrony/while.html">Pętla while.</a>
+								<a class="list-group-item" href="podstrony/dowhile.html">Pętla do..while.</a>
+								<a class="list-group-item" href="podstrony/function.html">Funkcja</a>
+								<a class="list-group-item" href="podstrony/obiekty.html">Obiekty</a>
+						</section>
+				</section>
+		</section>
+		<section class="col-md-3">
+				<section class="bg-light p-5 rounded-lg"><h2>to powinno być menu z boku</h2></section>
+		</section>
+</section>
+
+<script>
+    $(document).ready(function(){
+        $('.list-group-item').click(function(e){
+            e.preventDefault();
+            var content = $(this)
+            $("#dynamic").fadeOut(250, function(){
+                $("#dynamic").load(content.attr('href'));
+            });
+            $("#dynamic").fadeIn(250, function(){
+            });
+        });
+    });
+</script>

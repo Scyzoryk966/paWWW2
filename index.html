@@ -14,7 +14,7 @@
 </head>
 <body onload="readCookieCSS()">
 	<section class="main-content">
-			<div class="container-fluid">
+			<section class="container-fluid">
 							<nav class="col-md-12 navbar navbar-expand-lg navbar-dark sticky-top">
 									<a class="navbar-brand" href="#">
 										<img class="img-fluid" alt="logo strony" title="JavaScript" src="img/logo.svg">
@@ -33,7 +33,7 @@
 											<a class="nav-link" href="/#">Dodatki</a>
 											</li>
 									</ul>
-									<div class="btn-group" style="margin-right: 30px; margin-left: 30px;"">
+									<section class="btn-group" style="margin-right: 30px; margin-left: 30px;">
 											<button id="losuj" type="button"
 													class="btn btn-light my-2 my-sm-0 btn-lg">
 													Losuj styl</button>
@@ -41,45 +41,36 @@
 													class="btn btn-light my-2 my-sm-0 dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 													<span class="sr-only">Rozwiń listę</span>
 											</button>
-											<div id="csschanger" class="dropdown-menu">
+											<section id="csschanger" class="dropdown-menu">
 													<a id="default" class="dropdown-item" data-theme="css/default.css"
 													   href="#">Żółty</a>
-													<div class="dropdown-divider"></div>
+													<section class="dropdown-divider"></section>
 													<a id="gray" class="dropdown-item" data-theme="css/gray.css"
 													   href="#">Szary</a>
-													<div class="dropdown-divider"></div>
+													<section class="dropdown-divider"></section>
 													<a id="green" class="dropdown-item" data-theme="css/green.css"
 													   href="#">Zielony</a>
-													<div class="dropdown-divider"></div>
+													<section class="dropdown-divider"></section>
 													<a id="blue" class="dropdown-item" data-theme="css/blue.css"
 													   href="#">Niebieski</a>
-											</div>
-									</div>
+											</section>
+									</section>
 							</nav>
-					<div class="container">
+					<section class="container">
 						<section id="dynamic">
-									<div class="row">
-											<div class="col-md-9">
-													<div class="bg-light p-5 rounded-lg"><h1>Witam na stronie głownej</h1>
-													<h1>główny content</h1>
-													</div>
-											</div>
-											<div class="col-md-3">
-													<div class="bg-light p-5 rounded-lg"><h2>to powinno być menu z boku</h2></div>
-											</div>
-									</div>
+<!--									Tutaj bedzie wstrzykiwany content strony-->
 						</section>
-									<div class="row">
-											<div class="col-md-12">
+									<section class="row">
+											<section class="col-md-12">
 													<footer class="page-footer font-small">
-															<div class="footer-copyright text-center py-3">© 2019 Copyright Damian Szefler
-															</div>
+															<section class="footer-copyright text-center py-3">© 2019 Copyright Damian Szefler
+															</section>
 													</footer>
-											</div>
-									</div>
-							</div>
+											</section>
+									</section>
+							</section>
 
-			</div>
+			</section>
 	</section>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

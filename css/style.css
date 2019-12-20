@@ -23,6 +23,15 @@
     top: 20px;
 }
 
+.menu {
+    max-width: 500px;
+    color: black;
+}
+.menu a{
+    line-height: 1em;
+    color: black;
+}
+
 .navbar{
     font-family: Tahoma, serif;
     font-weight: 500;
