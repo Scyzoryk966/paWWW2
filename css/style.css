@@ -58,6 +58,52 @@
     border-radius: 15px;
     margin: 1% 0 1% 0;
 }
+
+
+pre {
+    border: 15px solid rgba(0, 0, 0, 0);
+}
+
+table {
+    width: 80%;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+td, tr {
+    font-size: 1em;
+    padding: 10px;
+    border-bottom: solid #cbc8cb;
+}
+
+th {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)) center center;
+    font-size: 1.8em;
+    padding: 8px;
+    font-family: Tahoma, sans-serif;
+}
+
+td.colspan {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+td:nth-child(3n+1) {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+td:nth-child(3n+2) {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 1000px) {
+    table {
+        padding: 1px;
+        font-size: 1.8em;
+    }
+}
 @media screen and (max-width: 767px) {
     .sticky-top {
         position: relative !important;

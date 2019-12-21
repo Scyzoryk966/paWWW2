@@ -15,23 +15,14 @@
 								<a class="list-group-item" href="podstrony/function.html">Funkcja</a>
 								<a class="list-group-item" href="podstrony/obiekty.html">Obiekty</a>
 						</section>
+						<pre><code>
+						&lt;script type="text/javascript">
+							   tutaj kod skryptu
+						&lt;/script>
+								</code></pre>
 				</section>
 		</section>
 		<section class="col-md-3">
 				<section class="bg-light p-5 rounded-lg"><h2>to powinno być menu z boku</h2></section>
 		</section>
 </section>
-
-<script>
-    $(document).ready(function(){
-        $('.list-group-item').click(function(e){
-            e.preventDefault();
-            var content = $(this)
-            $("#dynamic").fadeOut(250, function(){
-                $("#dynamic").load(content.attr('href'));
-            });
-            $("#dynamic").fadeIn(250, function(){
-            });
-        });
-    });
-</script>

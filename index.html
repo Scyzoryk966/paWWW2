@@ -5,14 +5,17 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
 		<link id="theme" rel="stylesheet" href="css/default.css" type="text/css"/>
 		<link rel="stylesheet" href="css/style.css" type="text/css"/>
+		<link rel="stylesheet" href="css/atom-one-dark.css" type="text/css"/>
 		<link rel="shortcut icon" href="img/logo-mini.png"/>
 		<link rel="icon" href="img/logo-mini.png" type="image/x-icon" />
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="Description" content="Strona z podstawami JavaScript zrobiona na zaliczenie.">
 		<title>Kurier PostHub</title>
+		<script src="js/highlight.pack.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
 </head>
-<body onload="readCookieCSS()">
+<body onload="readCookieCSS()" data-spy="scroll" data-target=".navbar" data-offset="50">
 	<section class="main-content">
 			<section class="container-fluid">
 							<nav class="col-md-12 navbar navbar-expand-lg navbar-dark sticky-top">
@@ -57,10 +60,887 @@
 									</section>
 							</nav>
 					<section class="container">
-						<section id="dynamic">
-<!--									Tutaj bedzie wstrzykiwany content strony-->
-						</section>
-									<section class="row">
+							<section class="row">
+									<section class="col-md-9">
+											<section class="bg-light p-5 rounded-lg">
+													<h1 class="text-center display-3">Podstawy JavaScript</h1>
+
+
+													<h1 id="umieszczanie">Umieszcanie skryptu w pliku HTML</h1>
+
+													<p>Skrypt w pliku HTML umieszcamy w taki sposob:</p>
+<pre><code class="javascript">&lt;script type="text/javascript">
+       tutaj kod skryptu
+&lt;/script>
+</code></pre>
+
+													<p> w sekcji body lub head.</p>
+													<h1 class="mt-3" id="write">Instrukcja document.write</h1>
+													<span class="ref">Żródło: <a target="_blank"
+																				 href="http://webmade.org/kursy-online/document-write-kurs-javascript.php">webmade.org</a></span>
+													<p>Nasz pierwszy skrypt będzie wypisywał na ekranie tekst. Posłużymy się do tego instrukcją document.write.
+															Document jest to obiekt JavaScript, który reprezentuje aktualnie wyświetlaną stronę, natomiast write -
+															to jego metoda, czyli funkcja wykonująca określone działania na obiekcie - w tym wypadku wypisuje tekst.
+															Nasz tekst umieszczamy w nawiasach, jako argumenty wywołania metody. Ogólnie postępujemy następująco:
+															obiekt.metoda( argumenty metody )
+
+															Zatem nasz standardowy program "Hello World" będzie wyglądał następująco:</p>
+
+													<pre><code class="javascript">document.write("Witaj świecie!")</code></pre>
+
+													<input class="btn btn-outline-primary my-2 my-sm-0 mb-5 btn-lg"
+														   type="button"
+														   id="guzik"
+														   value="Kliknij aby wykonać program"/>
+
+													<script>
+                                                        function wypisz() {
+                                                            document.write("Witaj świecie!");
+                                                            document.write("<br><form action=\"../podstrony/write.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
+                                                            document.write("<form action=\"../indexpod.html\"><input type=\"submit\" value=\"Powrót do zadan\" /></form>");
+                                                        }
+
+                                                        document.getElementById('guzik').onclick = wypisz
+													</script>
+													<h1 id="dialog" class="mt-3">Okna dialogowe</h1>
+													<span class="ref">Żródło:
+										<a target="_blank" href="https://kursjs.pl/kurs/okna-dialogowe.php">kursjs.pl</a></span>
+													<p>Z jednej strony okienka takie są łatwe we wdrożeniu i skuteczne (bo gdy się pojawią, nie pozwalają kliknąć
+															niczego innego na stronie), z drugiej strony bardzo ładnie odciągają uwagę odwiedzającego od zawartości
+															strony.
+															Nie odradzam ich używania. Po prostu czasami trzeba się zastanowić, czy nie ma lepszej metody, by
+															poinformować
+															użytkownika o danym zdarzeniu. Przykładowo zamiast pokazywać alerta z informacją o źle wpisanym mailu,
+															lepiej
+															jest wyświetlić obok takiego pola czerwony znaczek czy coś symbolizującego, że ów pole jest źle
+															wypełnione.
+															Użytkowanie strony będzie wtedy o wiele przyjemniejsze.</p>
+
+													<pre><code class="javascript">alert('treść komunikatu');	//okienko alert
+prompt('treść komunikatu');    //okienko prompt
+confirm('treść komunikatu');    //okienko confirm</code></pre>
+
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="alert"
+														   value="Kliknij aby wykonać program ALERT"/>
+													<script>
+                                                        function wypisz() {
+                                                            alert("Okienko ALERT!");
+                                                        }
+
+                                                        document.getElementById('alert').onclick = wypisz
+													</script>
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="guzik1" value="Kliknij aby wykonać program PROMPT"/>
+
+													<script>
+                                                        function wypisz() {
+                                                            prompt("Okienko PROMPT!");
+                                                        }
+
+                                                        document.getElementById('guzik1').onclick = wypisz
+													</script>
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="guzik2" value="Kliknij aby wykonać program CONFIRM"/>
+													<script>
+                                                        function wypisz() {
+                                                            confirm("Okienko CONFIRM!");
+                                                        }
+
+                                                        document.getElementById('guzik2').onclick = wypisz
+													</script>
+													<h1 id="zmienne" class="mt-3">Zmienne</h1>
+													<span class="ref">Żródło: <a target="_blank" href="http://www.robert.type.pl/szkola/e-14/typy-danych-w-js/">
+				robert.type.pl</a></span>
+													<p>W języku JavaScript można wykonywać operacje nie tylko na liczbach, ale także na innych typach wartości.
+															Pełna lista tych typów jest następująca (w nawiasach są nazwy angielskie):</p>
+													<ul>
+															<li>liczby (Number);
+															<li>ciągi znaków (String);
+															<li>wartości logiczne (Boolean);
+															<li>obiekty (Object);
+															<li>tablice (Array);
+													</ul>
+													<p>oraz dwa typy/wartości specjalne: Null i Undefined. Wykonamy nastepujący program:</p>
+
+													<pre><code class="javascript">&lt;script language="javascript">
+var imie = "Damian"
+var nazwisko = "Szefler"
+var wiek = "23"
+var napis = "Nazywasz się " + imie + " " + nazwisko + " i masz " + wiek + " lat.";
+document.write(napis);
+&lt;/script></code></pre>
+
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="var" value="Kliknij aby wykonać program"/>
+
+													<script>
+                                                        function wypisz() {
+                                                            var imie = "Damian"
+                                                            var nazwisko = "Szefler"
+                                                            var wiek = "23"
+                                                            var napis = "Nazywasz się " + imie + " " + nazwisko + " i masz " + wiek + " lat.";
+                                                            document.write(napis);
+
+                                                            document.write("<br><form action=\"../podstrony/var.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
+                                                            document.write("<form action=\"../indexpod.html\"><input type=\"submit\" value=\"Powrót do zadan\" /></form>");
+                                                        }
+
+                                                        document.getElementById('var').onclick = wypisz
+													</script>
+													<h1 id="operatory" class="mt-3">Operatory</h1>
+													<span class="ref">Żródło: <a target="_blank" href="http://javascript.xn--rzeniczak-sbc.pl/02lekc2.php">
+				javascript.xn--rzeniczak-sbc.pl</a></span>
+													<p>W dwóch powyższych linijkach kodu użyliśmy operatora + łączenia stringów. Dzięki niemu możemy
+															wypisywać złożone zdania, zmieniające się w zależności od zmiennych. Jeżeli przy łączeniu
+															różnych typów zmiennych występuje string i operator łączenia +, pozostałe zmienne są
+															przekształcane również na string.
+
+															Zestawienie operatorów używanych w JavaScript:</p>
+
+													<table style="border:1em;">
+															<tr>
+																	<th>Operator</th>
+																	<th>Opis</th>
+																	<th>Przykłady</th>
+															</tr>
+															<tr>
+																	<td colspan="3" class="colspan">Porównania</td>
+															</tr>
+															<tr>
+																	<td>==</td>
+																	<td>jest równe</td>
+																	<td>2==3 wynik: fałsz</td>
+															</tr>
+															<tr>
+																	<td>!==</td>
+																	<td>nie jest równe</td>
+																	<td>2!=3 wynik: prawda</td>
+															</tr>
+															<tr>
+																	<td>&gt;</td>
+																	<td>jest większe</td>
+																	<td>2&gt;3 wynik: fałsz</td>
+															</tr>
+															<tr>
+																	<td>&lt;</td>
+																	<td>jest mniejsze</td>
+																	<td>2&lt;3 wynik: prawda</td>
+															</tr>
+															<tr>
+																	<td>&gt;=</td>
+																	<td>mniejsze lub równe</td>
+																	<td>2&gt;=3 wynik:fałsz</td>
+															</tr>
+															<tr>
+																	<td>&lt;=</td>
+																	<td>większe lub równe</td>
+																	<td>3&lt;=3 wynik: prawda</td>
+															</tr>
+															<tr>
+																	<td colspan="3" class="colspan">Przypisania</td>
+															</tr>
+															<tr>
+																	<td>=</td>
+																	<td>x=y</td>
+																	<td></td>
+															</tr>
+															<tr>
+																	<td>+=</td>
+																	<td>x+=7</td>
+																	<td>x=x+7</td>
+															</tr>
+															<tr>
+																	<td>-=</td>
+																	<td>x-=7</td>
+																	<td>x=x-7</td>
+															</tr>
+															<tr>
+																	<td>*=</td>
+																	<td>x*=y</td>
+																	<td>x=x+y</td>
+															</tr>
+															<tr>
+																	<td>/=</td>
+																	<td>x/=y</td>
+																	<td>x=x/y</td>
+															</tr>
+															<tr>
+																	<td>%=</td>
+																	<td>x%=y</td>
+																	<td>x=x%y</td>
+															</tr>
+															<tr>
+																	<td colspan="3" class="colspan">Logiczne</td>
+															</tr>
+															<tr>
+																	<td>&amp;&amp;</td>
+																	<td>i</td>
+																	<td>true &amp;&amp; true = prawda<br>true $$ false = fałsz</td>
+															</tr>
+															<tr>
+																	<td>||</td>
+																	<td>lub</td>
+																	<td>true || false = prawda</td>
+															</tr>
+															<tr>
+																	<td>!</td>
+																	<td>zaprzeczenie</td>
+																	<td>!true = fałsz</td>
+															</tr>
+													</table>
+													<h1 id="if" class="mt-3">Instrukcja warunkowa</h1>
+													<span class="ref">Żródło: <a target="_blank"
+																				 href="http://www.robert.type.pl/szkola/e-14/jak-stosowac-instrukcje-warunkowa-w-java-scripcie/">robert.type.pl</a></span>
+													<p>Do stworzenia prostego skryptu wystarczy użyć kilku (lub więcej) instrukcji, które zostaną wykonane
+															sekwencyjnie (jedna po drugiej), tak jak były zapisane. W praktyce jednak takie proste skrypty są
+															rzadkością - zdecydowanie częściej w skrypcie trzeba wykonać (lub nie) dany fragment kodu w zależności
+															od tego czy określony warunek będzie spełniony (lub też odwrotnie). Do tego celu właśnie służą
+															instrukcje warunkowe, które omówię w tej części kursu.
+
+															Instrukcje warunkowe służą do decydowania który fragment kodu powinien zostać wykonany w zależności od
+															spełnienia określonych warunków; inaczej mówiąc służą do rozgałęzienia ścieżki wykonywania skryptu.
+															Wykonamy nastepujace skrypty:</p>
+
+													<pre><code>&lt;script type="text/javascript">
+  var a = prompt("Podaj imie...", "...");
+    if (a!=null){
+        document.write("Witaj "+a+" !");
+        }
+    else {
+        document.write("Nie podałeś imienia!");
+        }
+&lt;/script></code></pre>
+
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="if1" value="Kliknij aby wykonać program"/>
+
+													<script>
+                                                        function wypisz() {
+                                                            var a = prompt("Podaj imie...");
+                                                            if (a == null) {
+
+                                                                document.write("Nie podałeś imienia!");
+                                                            } else {
+                                                                document.write("Witaj " + a + " !");
+                                                            }
+
+
+                                                            document.write("<br><form action=\"../podstrony/if.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
+                                                            document.write("<form action=\"../indexpod.html\"><input type=\"submit\" value=\"Powrót do zadan\" /></form>");
+                                                        }
+
+                                                        document.getElementById('if1').onclick = wypisz
+													</script>
+													<!--Guzik2!-->
+
+													<pre><code>&lt;script type="text/javascript">
+	var a = prompt("Podaj A...", "...");
+	var b = prompt("Podaj B...", "...");
+	var c = prompt("Podaj C...", "...");
+	var delta;
+		delta = (b * b) - 4 * a * c;
+			if(delta>0){
+			alert("Wynik to: " +delta);
+			}
+			else{
+			alert("Jestes w dupie, delta jest ujemna");
+			}
+&lt;/script></code></pre>
+
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="if2" value="Kliknij aby wykonać program"/>
+
+													<script>
+                                                        function wypisz() {
+
+                                                            var a = prompt("Podaj A...", "...");
+                                                            var b = prompt("Podaj B...", "...");
+                                                            var c = prompt("Podaj C...", "...");
+                                                            var delta;
+                                                            delta = (b * b) - 4 * a * c;
+                                                            if (delta > 0) {
+                                                                alert("Wynik to: " + delta);
+                                                            } else {
+                                                                alert("Jestes w dupie, delta jest ujemna");
+                                                            }
+
+                                                        }
+
+                                                        document.getElementById('if2').onclick = wypisz
+													</script>
+													<h1 id="for" class="mt-3">Pętla For</h1>
+													<p>Stworzenie skryptu który ma po kolei wykonać kilka operacji jest proste, jak to przedstawiłem w poprzednich
+															lekcjach kursu. Jednak nierzadko zdarza się iż pewną operację lub sekwencję operacji warto byłoby
+															wykonać wielokrotnie, chociażby z tego względu aby zaoszczędzić sobie pisania. Owszem można skopiować
+															dany fragment skryptu tyle razy ile potrzeba, ale do jest kiepskie rozwiązanie. Po pierwsze tak
+															przygotowany skrypt jest trudny w utrzymaniu - wyobraź sobie tylko że skopiowałeś(aś) go 20 razy, i
+															musisz w tych 20 miejscach nanieść jakąś poprawkę. Po drugie takie podejście nie zawsze jest możliwe -
+															czasami trzeba powtarzać daną operację, za każdym razem sprawdzając czy określony warunek jest spełniony
+															(np. wczytywać od użytkownika kolejne liczby aż do momentu aż wpisze on liczbę zero). Do rozwiązania
+															tego typu problemów stosuje się pętle. Użycie pętli spowoduje że określony fragment skryptu będzie
+															wykonany określoną z góry ilość razy, lub też do momentu aż podany warunek zostanie spełniony.Wykonamy
+															nastepujacy skrypt:</p>
+
+													<pre><code>&lt;script type="text/javascript">
+    for (var i=1;i&lt;=50;i++) {
+        if(i%2 !=0){
+                document.write("&lt;br>");
+        }
+        else{
+            document.write(+i);
+        continue
+        }
+    }
+&lt;/script></code></pre>
+
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="for1" value="Kliknij aby wykonać program"/>
+													<script>
+                                                        function wypisz() {
+
+
+                                                            for (var i = 1; i <= 50; i++) {
+                                                                if (i % 2 !== 0) {
+                                                                    document.write("<br>");
+                                                                } else {
+                                                                    document.write(+i);
+                                                                    continue
+                                                                }
+                                                            }
+
+                                                            document.write("<br><form action=\"../podstrony/for.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
+                                                            document.write("<form action=\"../indexpod.html\"><input type=\"submit\" value=\"Powrót do zadan\" /></form>");
+                                                        }
+
+                                                        document.getElementById('for1').onclick = wypisz
+													</script>
+
+													<h2>Program wypisującydaną ilosć kratek:</h2>
+													<pre><code>&lt;script type= "text/JavaScript">
+    var e=prompt("Podaj liczbe f " , "" );
+    var f;
+    for (f=1;f&lt;=e;f++)
+    {
+        document.write("#");
+    }
+    document.write("&lt;br>");
+&lt;/script></code></pre>
+													<!--Guzik2!-->
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="for2" value="Kliknij aby wykonać program"/>
+													<script>
+                                                        function wypisz() {
+
+                                                            var a = prompt("Podaj liczbe kratek ", "");
+                                                            var i;
+                                                            for (i = 1; i <= a; i++) {
+                                                                document.write("#");
+                                                            }
+                                                            document.write("<br>");
+
+                                                            document.write("<br><form action=\"../podstrony/for.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
+                                                            document.write("<form action=\"../indexpod.html\"><input type=\"submit\" value=\"Powrót do zadan\" /></form>");
+                                                        }
+
+                                                        document.getElementById('for2').onclick = wypisz
+													</script>
+													<h2>Program wypisujący trójkąt prostokatny o danej podstawie:</h2>
+													<pre><code>&lt;script type="text/javascript">
+    var a=prompt("Podaj liczbe a " , "" );
+    var c;
+    var d;
+    var e=1;
+    for (c=1;c&lt;=a;c++)
+        {
+            for (d=1;d&lt;=e;d++)
+            {
+            document.write("#")
+            }
+        e++;
+        document.write("&lt;br>")
+        }
+    document.write("&lt;br> &lt;br> &lt;br>");
+&lt;/script></code></pre>
+													<!--Guzik3!-->
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="for3" value="Kliknij aby wykonać program"/>
+													<script>
+                                                        function wypisz() {
+
+                                                            var a = prompt("Podaj liczbe a ", "");
+
+                                                            var c;
+                                                            var d;
+                                                            var e = 1;
+                                                            for (c = 1; c <= a; c++) {
+                                                                for (d = 1; d <= e; d++) {
+                                                                    document.write("#")
+
+                                                                }
+                                                                e++;
+                                                                document.write("<br>")
+                                                            }
+
+                                                            document.write("<Br> <br> <br>");
+
+
+                                                            document.write("<br><form action=\"../podstrony/for.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
+                                                            document.write("<form action=\"../indexpod.html\"><input type=\"submit\" value=\"Powrót do zadan\" /></form>");
+                                                        }
+
+                                                        document.getElementById('for3').onclick = wypisz
+													</script>
+													<h2>Program wypisujący Prostokat o podanych bokach:</h2>
+													<pre><code>&lt;script type= "text/JavaScript">
+    var a=prompt("Podaj liczbe a " , "" );
+    var b=prompt("Podaj liczbe b " , "" );
+    var c;
+    var d;
+        for (c=1;c&lt;=a;c++)
+        {
+            for (d=1;d&lt;=b;d++)
+            {
+                document.write("#")
+            }
+            document.write("&lt;br>")
+        }
+    document.write("&lt;br> &lt;br> &lt;br>");
+&lt;/script></code></pre>
+													<!--Guzik4!-->
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="for4" value="Kliknij aby wykonać program"/>
+													<script>
+                                                        function wypisz() {
+
+                                                            var a = prompt("Podaj liczbe a ", "");
+                                                            var b = prompt("Podaj liczbe b ", "");
+                                                            var c;
+                                                            var d;
+                                                            for (c = 1; c <= a; c++) {
+                                                                for (d = 1; d <= b; d++) {
+                                                                    document.write("#")
+                                                                }
+                                                                document.write("<br>")
+                                                            }
+                                                            document.write("<Br> <br> <br>");
+
+
+                                                            document.write("<br><form action=\"../podstrony/for.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
+                                                            document.write("<form action=\"../indexpod.html\"><input type=\"submit\" value=\"Powrót do zadan\" /></form>");
+                                                        }
+
+                                                        document.getElementById('for4').onclick = wypisz
+													</script>
+													<!--Guzik3!-->
+
+													<script>
+                                                        function wypisz() {
+
+                                                            var a = prompt("Podaj liczbe a ", "");
+
+                                                            var c;
+                                                            var d;
+                                                            var e = 1;
+                                                            for (c = 1; c <= a; c++) {
+                                                                for (d = 1; d <= e; d++) {
+                                                                    document.write("#")
+
+                                                                }
+                                                                e++;
+                                                                document.write("<br>")
+                                                            }
+
+                                                            document.write("<Br> <br> <br>");
+
+
+                                                            document.write("<br><form action=\"../podstrony/for.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
+                                                            document.write("<form action=\"../indexpod.html\"><input type=\"submit\" value=\"Powrót do zadan\" /></form>");
+                                                        }
+
+                                                        document.getElementById('for3').onclick = wypisz
+													</script>
+													<h2>Program wypisujący tabliczke mnoczenia danych liczb:</h2>
+													<pre><code>&lt;script type= "text/JavaScript">
+    var a=prompt("Podaj liczbe a " , "" );
+    var b=prompt("Podaj liczbe b " , "" );
+    var i;
+    var j;
+    for(i=a;i&lt;=b;i++) {
+        for (j=a;j&lt;=b;j++)
+        {
+        document.write(j*i+" ")
+        }
+    document.write("&lt;br>")
+    }
+&lt;/script></code></pre>
+													<!--Guzik5!-->
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="for5" value="Kliknij aby wykonać program"/>
+													<script>
+                                                        function wypisz() {
+
+                                                            var a = prompt("Podaj liczbe a ", "");
+                                                            var b = prompt("Podaj liczbe b ", "");
+                                                            var i;
+                                                            var j;
+                                                            for (i = a; i <= b; i++) {
+                                                                for (j = a; j <= b; j++) {
+                                                                    document.write(j * i + " ")
+                                                                }
+                                                                document.write("<br>")
+                                                            }
+
+                                                            document.write("<br><form action=\"../podstrony/for.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
+                                                            document.write("<form action=\"../indexpod.html\"><input type=\"submit\" value=\"Powrót do zadan\" /></form>");
+                                                        }
+
+                                                        document.getElementById('for5').onclick = wypisz
+													</script>
+													<h1 id="while" class="mt-3">Pętla while</h1>
+													<span class="ref">Żródło: <a target="_blank"
+																				 href="http://webmaster.helion.pl/index.php/kjs-cechy-jezyka/kjs-instrukcje/kursjs-petle">webmaster.helion.pl
+		</a></span>
+													<p>Pętlami nazywamy konstrukcje języka, które pozwalają na wielokrotne wykonywanie powtarzających się
+															instrukcji. Przykładowo, jeśli trzeba 10 razy wyświetlić na ekranie pewien napis, to można wykorzystać w
+															tym celu 10 instrukcji document.write("napis"), jednak zdecydowanie lepiej i prościej użyć jednej z
+															pętli. Program będzie wyglądał następująco:</p>
+
+													<pre><code>&lt;script type="text/javascript">
+  var a=1;
+  while(a<=20){
+    document.write("Nie lubie poniedziłków&lt;br>");
+    a++
+  }
+&lt;/script></code></pre>
+
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg"
+														   type="button" id="while1"
+														   value="Kliknij aby wykonać program"/>
+
+													<script>
+                                                        function wypisz() {
+                                                            var a = 1;
+                                                            while (a <= 20) {
+                                                                document.write("Nie lubie poniedziałków<br>");
+                                                                a++
+                                                            }
+
+                                                            document.write("<br><form action=\"../podstrony/while.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
+                                                            document.write("<form action=\"../indexpod.html\"><input type=\"submit\" value=\"Powrót do zadan\" /></form>");
+                                                        }
+
+                                                        document.getElementById('while1').onclick = wypisz
+													</script>
+													<p>Ten sprypt wypisuje wszystkie liczby pomiedzy A i B lub sprzawdza czy sa równe:</p>
+													<pre><code>&lt;script type="text/javascript">
+  var a = prompt("Podaj mniejsza.");
+  var b = prompt("Podaj wieksza...");
+  if(a&lt;b){
+    while(a&lt;b-1){
+      a++;
+      document.write(+a+"&lt;br>");
+      }
+  }
+  else if(a>b){
+    while(a-1>b){
+    a--;
+    document.write(+a+"&lt;br>");
+    }
+  }
+  else if(a==b){
+  document.write("A jest równe B");
+  }
+&lt;/script></code></pre>
+
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="while2" value="Kliknij aby wykonać program"/>
+
+													<script>
+                                                        function wypisz() {
+
+                                                            var a = prompt("Podaj mniejsza.");
+                                                            var b = prompt("Podaj wieksza...");
+                                                            if (a < b) {
+                                                                while (a < b - 1) {
+                                                                    a++;
+                                                                    document.write(+a + "<br>");
+                                                                }
+                                                            } else if (a > b) {
+                                                                while (a - 1 > b) {
+                                                                    a--;
+                                                                    document.write(+a + "<br>");
+                                                                }
+                                                            } else if (a == b) {
+                                                                document.write("A jest równe B");
+                                                            }
+
+                                                            document.write("<br><form action=\"../podstrony/while.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
+                                                            document.write("<form action=\"../indexpod.html\"><input type=\"submit\" value=\"Powrót do zadan\" /></form>");
+                                                        }
+
+                                                        document.getElementById('while2').onclick = wypisz
+													</script>
+													<h1 id="dowhile" class="mt-3">Pętla do...while</h1>
+													<span class="ref">Żródło: <a target="_blank" href="http://www.lomilowka.pl/pliki/jspelte11_pdf-8877.pdf">
+				lomilowka.pl</a></span>
+													<p>Podobnym rodzajem pętli jest pętla typu do ... while. Zasadniczą różnicą między tym typem a poprzednim jest
+															to,
+															że kod który ma być powtarzany zostanie wykonany przed sprawdzeniem wyrażenia. Ogólna postać tego typu
+															pętli
+															jest następująca:</p>
+
+													<pre><code>do {
+    ...fragment kodu który będzie powtarzany...
+} while (wyrażenie)</code></pre>
+													<p>Wykonamy nastepujace zadanie: </p>
+
+													<pre><code>&lt;script type="text/javascript">
+                var x = 1;
+                var haslo;
+                do {
+                        haslo = prompt("Podaj hasło...", "...");
+                        if (haslo == "barbarossa") {
+                                document.write("Złamałeś haslo!&lt;br>");
+                                break
+                        } else {
+                                document.write("złe hasło&lt;br>");
+                                x++
+                                continue
+                        }
+                }
+                while (x &lt; 4);
+                if (x == 4) {
+                        document.write("Przekroczyles ilosc prob zalogowania&lt;br>");
+                }
+&lt;/script></code></pre>
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg"
+														   type="button" id="dowhile1"
+														   value="Kliknij aby wykonać program"/>
+
+													<script>
+                                                        function wypisz() {
+
+                                                            var x = 1;
+                                                            var haslo;
+                                                            do {
+                                                                haslo = prompt("Podaj hasło...", "...");
+                                                                if (haslo == "barbarossa") {
+                                                                    document.write("Złamałeś haslo!<br>");
+                                                                    break
+                                                                } else {
+                                                                    document.write("złe hasło<br>");
+                                                                    x++
+                                                                    continue
+                                                                }
+                                                            }
+                                                            while (x < 4);
+                                                            if (x == 4) {
+                                                                document.write("Przekroczyles ilosc prob zalogowania<br>");
+                                                            }
+
+                                                            document.write("<br><form action=\"../podstrony/dowhile.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
+                                                            document.write("<form action=\"../indexpod.html\"><input type=\"submit\" value=\"Powrót do zadan\" /></form>");
+                                                        }
+
+                                                        document.getElementById('dowhile1').onclick = wypisz
+													</script>
+													<h1 id="funkcja" class="mt-3">Funkcja</h1>
+													<span class="ref">Żródło: <a target="_blank" href="http://zsoitmilowka.pl/pliki/jsfunkcje_pdf-8878.pdf">
+				zsoitmilowka.pl</a></span>
+													<p>Gdy mąż słyszy od żony idź do sklepu, kup ziemniaki, wówczas zaczyna wykonywać pewien zbiór czynności. Za
+															każdym razem, gdy usłyszy idź do sklepu, kup ziemniaki, wykona ten sam zbiór czynności (heh - do
+															czasu...). W javascript takie czynności ujęte w grupę to właśnie funkcje.
+
+															Funkcja jest wywoływana przez inną część skryptu (w realnym życiu przez żonę), a w momencie jej
+															wywołania zostaje wykonywany kod w niej zawarty. Ogólny wygląd funkcji ma następującą postać:</p>
+
+													<pre><code>function nazwa_funkcji() {
+    ...kod funkcji
+}
+//lub
+nazwa_funkcji = function() {
+    ...kod funkcji anonimowej
+}</code></pre>
+													<p>Wykonamy nastepujace zadanie:</p>
+
+													<pre><code>&lt;script type="text/javascript">
+    function pisz() {
+        alert("To jest tekst zawarty w funkcji.");
+    }
+
+    pisz(); //odpalamy powyższą funkcję
+    }
+&lt;/script></code></pre>
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="fun" value="Kliknij aby wykonać program"/>
+													<script>
+                                                        function wypisz() {
+
+                                                            alert("To jest tekst zawarty w funkcji.");
+
+                                                        }
+
+                                                        document.getElementById('fun').onclick = wypisz
+													</script>
+													<h1 id="obiekty">Obiekty</h1>
+													<span class="ref">Żródło: <a
+															target="_blank"
+															href="http://www.robert.type.pl/szkola/e-14/pracownia-aplikacji-internetowych/javascript/uncategorized/obiekty-w-javascript/">robert.type.pl</a></span>
+													<p>Pewnie słyszeliście już nazwę "programowanie obiektowe"? Jeżeli jeszcze nie programowaliście obiektowo, to
+															nie ma się co martwić - JavaScript właściwie cała opiera się na programowaniu obiektowym ;).
+															W waszych skryptach nieraz i nie dwa odwołujecie się do obiektów. Na przykład window, document, button
+															itp. to typowe obiekty, które posiadają swoje metody i właściwości :).
+
+															Oczywiście jak i inne języki, tak i Javascript umożliwia tworzenie własnych obiektów. Początkowo może
+															się wam wydawać, ze jest to nie za bardzo użyteczne (w końcu można większość rzeczy zrobić przy pomocy
+															funkcji itp), ale gdy zaznajomicie się z obiektami na pewno zmienicie zdanie. Przede wszystkim obiekty
+															dają nam ochronę danych. Dziwnie brzmi prawda? Na stronie nie raz tworzyłeś button. Każdy z nich ma np.
+															metodę onclick, właściwość value itp. Nie ma żadnego konfliktu w skrypcie, mimo tego, że obiekty te mają
+															metody i właściwości takie same jak ich "bracia". Poza tym programowanie obiektowe jest najbardziej
+															bliskie rzeczywistości. Zapraszam do lektury.</p>
+													<p>Aby utworzyć nowy pojedynczy obiekt możemy skorzystamy z poniższej konstrukcji:</p>
+													<pre><code>var obiekt_1 = {
+    imie: "Marcin",
+    wzrost: 184,
+    wypisz : function() {
+        alert(this.imie)
+    }
+}</code></pre>
+
+													<p>Tworzenie obiektu za pomocą konstruktora:</p>
+
+													<pre><code>function _KlasaObiektu(_width,_height) {
+    this.width = _width;
+    this.height = _height;
+    this.wypisz = function() {
+        alert(this.width + 'x' + this.height)
+    }
+}</code></pre>
+
+													<p>Wykonamy nastepujacy skrypt:</p>
+													<pre><code>&lt;script type= "text/JavaScript">
+function Biblioteka(dzial, tytol, autor, ilosc , wydawnictwo , sprzedajacy) {
+this.dzial=dzial;
+this.tytol=tytol;
+this.autor=autor;
+this.ilosc=ilosc;
+this.wydawnictwo=wydawnictwo;
+this.sprzedajacy=sprzedajacy;
+}
+function imiee(imie, nazwisko){
+this.imie=imie;
+this.nazwisko=nazwisko;
+}
+
+
+var z=true;
+while (z!=false){
+z=confirm("Chcesz wprowadzać dane dalej?");
+if (z!=true)
+{
+break
+}
+
+var a=prompt("Podaj dział");
+var b=prompt("Podaj tytuł");
+var c=prompt("Podaj autor");
+var d=prompt("Podaj ilość");
+var e=prompt("Podaj wydawnictwo");
+var f=prompt("Podaj imie spr");
+var g=prompt("Podaj nazwisko spr");
+
+
+
+spr=new imiee(f, g);
+
+ksiazka=new Biblioteka(a,b,c,d,e, spr);
+document.write(" &lt;b> Dział: &lt;/b> " + ksiazka.dzial  + " &lt;br> ");
+document.write(" &lt;b> Tytuł: &lt;/b> " + ksiazka.tytol  + " &lt;br> ");
+document.write(" &lt;b> Autor: &lt;/b> " + ksiazka.autor  + " &lt;br> ");
+document.write(" &lt;b> Ilość: &lt;/b> " + ksiazka.ilosc  + " &lt;br> ");
+document.write(" &lt;b> Wydawnictwo: &lt;/b> " + ksiazka.wydawnictwo  + " &lt;br>");
+document.write(" &lt;b> Srzedajacy: &lt;/b> " + ksiazka.sprzedajacy.imie);
+document.write(" +ksiazka.sprzedajacy.nazwisko  + " &lt;br>  &lt;br> ");
+}
+&lt;/script></code></pre>
+
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="obiekt"
+														   value="Kliknij aby wykonać program"/>
+
+													<script>
+                                                        function wypisz() {
+
+                                                            function Biblioteka(dzial, tytol, autor, ilosc, wydawnictwo, sprzedajacy) {
+                                                                this.dzial = dzial;
+                                                                this.tytol = tytol;
+                                                                this.autor = autor;
+                                                                this.ilosc = ilosc;
+                                                                this.wydawnictwo = wydawnictwo;
+                                                                this.sprzedajacy = sprzedajacy;
+                                                            }
+
+                                                            function imiee(imie, nazwisko) {
+                                                                this.imie = imie;
+                                                                this.nazwisko = nazwisko;
+                                                            }
+
+
+                                                            var z = true;
+                                                            while (z != false) {
+                                                                z = confirm("Chcesz wprowadzać dane dalej?");
+                                                                if (z != true) {
+                                                                    break
+                                                                }
+
+                                                                var a = prompt("Podaj dział");
+                                                                var b = prompt("Podaj tytuł");
+                                                                var c = prompt("Podaj autor");
+                                                                var d = prompt("Podaj ilość");
+                                                                var e = prompt("Podaj wydawnictwo");
+                                                                var f = prompt("Podaj imie spr");
+                                                                var g = prompt("Podaj nazwisko spr");
+
+
+                                                                spr = new imiee(f, g);
+
+                                                                ksiazka = new Biblioteka(a, b, c, d, e, spr);
+                                                                document.write(" <b> Dział: </b> " + ksiazka.dzial + " <br> ");
+                                                                document.write(" <b> Tytuł: </b> " + ksiazka.tytol + " <br> ");
+                                                                document.write(" <b> Autor: </b> " + ksiazka.autor + " <br> ");
+                                                                document.write(" <b> Ilość: </b> " + ksiazka.ilosc + " <br> ");
+                                                                document.write(" <b> Wydawnictwo: </b> " + ksiazka.wydawnictwo + " <br>");
+                                                                document.write(" <b> Srzedajacy: </b> " + ksiazka.sprzedajacy.imie + " " + ksiazka.sprzedajacy.nazwisko + " <br>  <br> ");
+                                                            }
+
+
+                                                            document.write("<br><form action=\"../podstrony/obiekty.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
+                                                            document.write("<form action=\"../indexpod.html\"><input type=\"submit\" value=\"Powrót do zadan\" /></form>");
+                                                        }
+
+                                                        document.getElementById('obiekt').onclick = wypisz
+													</script>
+											</section>
+									</section>
+									<section class="col-md-3">
+											<section class="bg-light p-5 rounded-lg">
+													<h2>to powinno być menu z boku</h2>
+													<section class="list-group menu">
+															<a class="list-group-item" href="javascript:void();"
+															   onclick="scroll_to('#umieszcanie');">Umieszczanie
+																	skryptu w pliku HTML.</a>
+															<a class="list-group-item" href="javascript:void();"
+															   onclick="scroll_to('#write');">Instrukcja document
+																	.write</a>
+															<a class="list-group-item" href="javascript:void();"
+															   onclick="scroll_to('#dialog');">Okna dialogowe.</a>
+															<a class="list-group-item" href="javascript:void();"
+															   onclick="scroll_to('#zmienne');">Zmienne.</a>
+															<a class="list-group-item" href="javascript:void();"
+															   onclick="scroll_to('#operatory');">Operatory.</a>
+															<a class="list-group-item" href="javascript:void();"
+															   onclick="scroll_to('#if');">Instrukcja warunkowa.</a>
+															<a class="list-group-item" href="javascript:void();"
+															   onclick="scroll_to('#for');"">Pętla for.</a>
+															<a class="list-group-item" href="javascript:void();"
+															   onclick="scroll_to('#while');">Pętla while.</a>
+															<a class="list-group-item" href="javascript:void();"
+															   onclick="scroll_to('#dowhile');">Pętla do..while.</a>
+															<a class="list-group-item" href="javascript:void();"
+															   onclick="scroll_to('#funkcja');">Funkcja</a>
+															<a class="list-group-item" href="javascript:void();"
+															   onclick="scroll_to('#obiekty');">Obiekty</a>
+													</section>
+											</section>
+									</section>
+							</section>
 											<section class="col-md-12">
 													<footer class="page-footer font-small">
 															<section class="footer-copyright text-center py-3">© 2019 Copyright Damian Szefler
@@ -75,7 +955,7 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/jquery.min.js"></script>
 	<script src="js/cookies.js"></script>
 	<script src="js/jQuery.js"></script>
 </body>
