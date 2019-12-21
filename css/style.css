@@ -11,6 +11,7 @@
  margin:1%;
 }
 .container{
+    overflow: hidden;
     max-width: 1900px;
 }
 
@@ -24,7 +25,6 @@
 }
 
 .menu {
-    max-width: 500px;
     color: black;
 }
 .menu a{
@@ -47,7 +47,7 @@
     height: 10ch;
 }
 
-.nav-item {
+li.nav-item {
     font-size: 1.5em;
     line-height: 1.2em;
     text-shadow: 1px 1px 5px black;
@@ -59,53 +59,38 @@
     margin: 1% 0 1% 0;
 }
 
+.formularz{
+    width: 65%;
+}
+
+h1, h2{
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
 
 pre {
     border: 15px solid rgba(0, 0, 0, 0);
 }
 
-table {
-    width: 80%;
-    padding: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-}
 
-td, tr {
-    font-size: 1em;
-    padding: 10px;
-    border-bottom: solid #cbc8cb;
-}
 
-th {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)) center center;
-    font-size: 1.8em;
-    padding: 8px;
-    font-family: Tahoma, sans-serif;
-}
-
-td.colspan {
-    text-align: center;
-    font-size: 1.2em;
-}
-
-td:nth-child(3n+1) {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-td:nth-child(3n+2) {
-    background-color: rgba(0, 0, 0, 0.25);
-}
-
-@media screen and (max-width: 1000px) {
-    table {
-        padding: 1px;
-        font-size: 1.8em;
-    }
-}
 @media screen and (max-width: 767px) {
     .sticky-top {
         position: relative !important;
+    }
+    .main-content{
+        margin: 0;
+    }
+    [class*="col-"] {
+        background-clip: unset;
+        border: 0;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+    }
+    .formularz{
+        width: auto;
     }
 }

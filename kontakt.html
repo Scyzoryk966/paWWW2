@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+		<link rel="stylesheet" href="css/reset.css" type="text/css"/>
+		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+		<link id="theme" rel="stylesheet" href="css/default.css" type="text/css"/>
+		<link rel="stylesheet" href="css/style.css" type="text/css"/>
+		<link rel="stylesheet" href="css/atom-one-dark.css" type="text/css"/>
+		<link rel="shortcut icon" href="img/logo-mini.png"/>
+		<link rel="icon" href="img/logo-mini.png" type="image/x-icon" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="Description" content="Strona z podstawami JavaScript zrobiona na zaliczenie.">
+		<title>Kurier PostHub</title>
+		<script src="js/highlight.pack.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body onload="readCookieCSS()" data-spy="scroll" data-target=".navbar" data-offset="50">
+	<section class="main-content">
+			<section class="container-fluid">
+							<nav class="col-md-12 navbar navbar-expand-lg navbar-dark sticky-top">
+									<a class="navbar-brand" href="#">
+										<img class="img-fluid" alt="logo strony" title="JavaScript" src="img/logo.svg">
+									</a>
+									<ul class="navbar-nav mr-auto">
+											<li class="nav-item active">
+													<a class="nav-link" href="index.html">Strona główna</a>
+											</li>
+											<li class="nav-item">
+													<a class="nav-link" href="#">Kontakt</a>
+											</li>
+											<li class="nav-item">
+													<a class="nav-link" href="/#">O nas</a>
+											</li>
+											<li class="nav-item">
+											<a class="nav-link" href="/#">Dodatki</a>
+											</li>
+									</ul>
+									<section class="btn-group" style="margin-right: 30px; margin-left: 30px;">
+											<button id="losuj" type="button"
+													class="btn btn-light my-2 my-sm-0 btn-lg">
+													Losuj styl</button>
+											<button type="button"
+													class="btn btn-light my-2 my-sm-0 dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													<span class="sr-only">Rozwiń listę</span>
+											</button>
+											<section id="csschanger" class="dropdown-menu">
+													<a id="default" class="dropdown-item" data-theme="css/default.css"
+													   href="#">Żółty</a>
+													<section class="dropdown-divider"></section>
+													<a id="gray" class="dropdown-item" data-theme="css/gray.css"
+													   href="#">Szary</a>
+													<section class="dropdown-divider"></section>
+													<a id="green" class="dropdown-item" data-theme="css/green.css"
+													   href="#">Zielony</a>
+													<section class="dropdown-divider"></section>
+													<a id="blue" class="dropdown-item" data-theme="css/blue.css"
+													   href="#">Niebieski</a>
+											</section>
+									</section>
+							</nav>
+					<section class="container">
+							<section class="row">
+									<section class="col-lg-9">
+											<div class="bg-light  p-1 p-sm-5 rounded-lg">
+													<h3 class="text-center">Formularz - Podstawy jakiego języka
+															dodać?</h3>
+													<div class="container formularz">
+															<form class="needs-validation" novalidate>
+
+																			<section class="form-row">
+																					<div class="col">
+																							<label class="pt-1"
+																								   for="imie">Imie:	</label>
+																							<input type="text"  id="imie" class="form-control" placeholder="Imie" required>
+																					</div>
+																			</section>
+																			<section class="form-row">
+																					<div class="col">
+																							<label class="pt-2"
+																									for="nazwisko">Nazwisko: </label>
+																							<input type="text" id="nazwisko" class="form-control" placeholder="Nazwisko" required>
+																					</div>
+																			</section>
+																			<label class="pt-2" for="defaultUnchecked">Płeć:</label>
+																			<div class="col">
+																					<div class="custom-control custom-radio">
+																							<input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios" checked>
+																							<label class="custom-control-label" for="defaultUnchecked">Mężczyzna</label>
+																					</div>
+																					<div class="custom-control custom-radio">
+																							<input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios">
+																							<label class="custom-control-label" for="defaultChecked">Kobieta</label>
+																					</div>
+																			</div>
+																			<div class="form-group">
+																					<label class="pt-2"
+																							for="kombo">Jaki język chciałbyś dodać?</label>
+																					<select id="kombo"
+																							class="form-control">
+																							<option>C#
+																							</option>
+																							<option>Python
+																							</option>
+																							<option>Java
+																							</option>
+																							<option>Prolog
+																							</option>
+																							<option>Haskell
+																							</option>
+																							<option>Ruby
+																							</option>
+																							<option>SQL
+																							</option>
+																					</select>
+
+																			</div>
+																			<div class="form-group">
+																					<label class="pt-2" for="email">Podaj swój adres Email</label>
+																					<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="example@cos.com" required>
+																					<div class="invalid-feedback">
+																							Proszę podać poprawny adres Email
+																					</div>
+																			</div>
+																			<div class="form-group">
+																					<label class="pt-2"
+																							for="lista">Jak oceniasz aktualną zawartość strony?</label>
+																					<select class="form-control" id="lista">
+																							<option>1</option>
+																							<option>2</option>
+																							<option>3</option>
+																							<option>4</option>
+																							<option>5</option>
+																					</select>
+																			</div>
+																			<div class="form-group">
+																					<div class="custom-control custom-checkbox">
+																							<input
+																									class="custom-control-input" type="checkbox" value="" id="addCom">
+																							<label
+																									class="custom-control-label" for="addCom">
+																									Dodaj komentarz
+																							</label>
+																					</div>
+																			</div>
+																			<div class="form-group" id="Com"
+																				 style="display:none">
+																					<label class="pt-2"
+																							for="poletekstowe">Komentarz:</label>
+																					<textarea class="form-control" id="poletekstowe" rows="3"></textarea>
+																			</div>
+																			<div class="form-group">
+																					<div class="custom-control custom-checkbox">
+																							<input class="custom-control-input" type="checkbox" value="" id="invalidCheck2" required>
+																							<label class="custom-control-label" for="invalidCheck2">
+																									Zgadzam sie na przetwarzanie moich danych.
+																							</label>
+																					</div>
+																			</div>
+																			<div class="custom-control custom-checkbox">
+																					<input type="checkbox" class="custom-control-input" id="customCheckDisabled" disabled>
+																					<label
+																							class="custom-control-label" for="customCheckDisabled">Zapisz sie do Newsletter'a</label>
+																			</div>
+																			<button class="btn btn-primary" type="submit">Potwierdź</button>
+																			<a href="index.html"><button class="btn btn-primary" type="button"> Powrót do strony głównej</button></a>
+
+															</form>
+													</div>
+													<h1> next rzeczy</h1>
+											</div>
+
+							</section>
+							<section class="col-lg-3">
+									<section class="bg-light p-3 p-sm-5 rounded-lg">
+											<h3>Scroll spy</h3>
+
+									</section>
+							</section>
+					</section>
+									<section class="col-md-12">
+											<footer class="page-footer font-small">
+													<section class="footer-copyright text-center py-3">© 2019 Copyright Damian Szefler
+													</section>
+											</footer>
+									</section>
+							</section>
+					</section>
+	</section>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/cookies.js"></script>
+	<script src="js/jQuery.js"></script>
+	<script>
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+
+        $('#addCom').click(function() {
+            if (this.checked) {
+                $('#Com').css('display', 'block');
+            } else {
+                $('#Com').css('display', 'none');
+            }
+        });
+	</script>
+</body>
+</html>

@@ -24,16 +24,16 @@
 									</a>
 									<ul class="navbar-nav mr-auto">
 											<li class="nav-item active">
-													<a class="nav-link" href="subcontent/page0.html">Strona główna</a>
+													<a class="nav-link" href="#">Strona główna</a>
 											</li>
 											<li class="nav-item">
-													<a class="nav-link" href="subcontent/page1.html">Śledź paczkę</a>
+													<a class="nav-link" href="kontakt.html">Kontakt</a>
 											</li>
 											<li class="nav-item">
-													<a class="nav-link" href="/#">O nas</a>
+													<a class="nav-link" href="#">O nas</a>
 											</li>
 											<li class="nav-item">
-											<a class="nav-link" href="/#">Dodatki</a>
+											<a class="nav-link" href="#">Dodatki</a>
 											</li>
 									</ul>
 									<section class="btn-group" style="margin-right: 30px; margin-left: 30px;">
@@ -61,12 +61,12 @@
 							</nav>
 					<section class="container">
 							<section class="row">
-									<section class="col-md-9">
-											<section class="bg-light p-5 rounded-lg">
-													<h1 class="text-center display-3">Podstawy JavaScript</h1>
+									<section class="col-lg-9">
+											<section class="bg-light  p-1 p-sm-5 rounded-lg">
+													<h1 class="text-center">Podstawy JavaScript</h1>
 
-
-													<h1 id="umieszczanie">Umieszcanie skryptu w pliku HTML</h1>
+													<h3 id="umieszczanie">Umieszcanie skryptu w
+															pliku HTML</h3>
 
 													<p>Skrypt w pliku HTML umieszcamy w taki sposob:</p>
 <pre><code class="javascript">&lt;script type="text/javascript">
@@ -75,7 +75,7 @@
 </code></pre>
 
 													<p> w sekcji body lub head.</p>
-													<h1 class="mt-3" id="write">Instrukcja document.write</h1>
+													<h3 class="mt-3" id="write">Instrukcja document.write</h3>
 													<span class="ref">Żródło: <a target="_blank"
 																				 href="http://webmade.org/kursy-online/document-write-kurs-javascript.php">webmade.org</a></span>
 													<p>Nasz pierwszy skrypt będzie wypisywał na ekranie tekst. Posłużymy się do tego instrukcją document.write.
@@ -88,7 +88,7 @@
 
 													<pre><code class="javascript">document.write("Witaj świecie!")</code></pre>
 
-													<input class="btn btn-outline-primary my-2 my-sm-0 mb-5 btn-lg"
+													<input class="btn btn-outline-primary my-2 my-sm-0 mb-5 btn-sm"
 														   type="button"
 														   id="guzik"
 														   value="Kliknij aby wykonać program"/>
@@ -102,7 +102,7 @@
 
                                                         document.getElementById('guzik').onclick = wypisz
 													</script>
-													<h1 id="dialog" class="mt-3">Okna dialogowe</h1>
+													<h3 id="dialog" class="mt-3">Okna dialogowe</h3>
 													<span class="ref">Żródło:
 										<a target="_blank" href="https://kursjs.pl/kurs/okna-dialogowe.php">kursjs.pl</a></span>
 													<p>Z jednej strony okienka takie są łatwe we wdrożeniu i skuteczne (bo gdy się pojawią, nie pozwalają kliknąć
@@ -120,7 +120,7 @@
 prompt('treść komunikatu');    //okienko prompt
 confirm('treść komunikatu');    //okienko confirm</code></pre>
 
-													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="alert"
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-sm" type="button" id="alert"
 														   value="Kliknij aby wykonać program ALERT"/>
 													<script>
                                                         function wypisz() {
@@ -129,7 +129,7 @@ confirm('treść komunikatu');    //okienko confirm</code></pre>
 
                                                         document.getElementById('alert').onclick = wypisz
 													</script>
-													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="guzik1" value="Kliknij aby wykonać program PROMPT"/>
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-sm" type="button" id="guzik1" value="Kliknij aby wykonać program PROMPT"/>
 
 													<script>
                                                         function wypisz() {
@@ -138,7 +138,7 @@ confirm('treść komunikatu');    //okienko confirm</code></pre>
 
                                                         document.getElementById('guzik1').onclick = wypisz
 													</script>
-													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="guzik2" value="Kliknij aby wykonać program CONFIRM"/>
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-sm" type="button" id="guzik2" value="Kliknij aby wykonać program CONFIRM"/>
 													<script>
                                                         function wypisz() {
                                                             confirm("Okienko CONFIRM!");
@@ -146,7 +146,7 @@ confirm('treść komunikatu');    //okienko confirm</code></pre>
 
                                                         document.getElementById('guzik2').onclick = wypisz
 													</script>
-													<h1 id="zmienne" class="mt-3">Zmienne</h1>
+													<h3 id="zmienne" class="mt-3">Zmienne</h3>
 													<span class="ref">Żródło: <a target="_blank" href="http://www.robert.type.pl/szkola/e-14/typy-danych-w-js/">
 				robert.type.pl</a></span>
 													<p>W języku JavaScript można wykonywać operacje nie tylko na liczbach, ale także na innych typach wartości.
@@ -168,7 +168,7 @@ var napis = "Nazywasz się " + imie + " " + nazwisko + " i masz " + wiek + " lat
 document.write(napis);
 &lt;/script></code></pre>
 
-													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="var" value="Kliknij aby wykonać program"/>
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-sm" type="button" id="var" value="Kliknij aby wykonać program"/>
 
 													<script>
                                                         function wypisz() {
@@ -184,7 +184,7 @@ document.write(napis);
 
                                                         document.getElementById('var').onclick = wypisz
 													</script>
-													<h1 id="operatory" class="mt-3">Operatory</h1>
+													<h3 id="operatory" class="mt-3">Operatory</h3>
 													<span class="ref">Żródło: <a target="_blank" href="http://javascript.xn--rzeniczak-sbc.pl/02lekc2.php">
 				javascript.xn--rzeniczak-sbc.pl</a></span>
 													<p>W dwóch powyższych linijkach kodu użyliśmy operatora + łączenia stringów. Dzięki niemu możemy
@@ -193,99 +193,40 @@ document.write(napis);
 															przekształcane również na string.
 
 															Zestawienie operatorów używanych w JavaScript:</p>
+													<ul class="nav nav-tabs" id="ajaxload">
+															<a href="subcontent/tab1.html" class="nav-item nav-link active">
+																	<i class="fa fa-user"></i>Przyrównywanie
+															</a>
+															<a href="subcontent/tab2.html"
+															   class="nav-item nav-link">
+																	<i class="fa fa-user"></i>Przypisywanie
+															</a>
+															<a href="subcontent/tab3.html"
+															   class="nav-item nav-link">
+																	<i class="fa fa-user"></i>Logiczne
+															</a>
+															<a href="subcontent/tab4.html"
+															   class="nav-item nav-link">
+																	<i class="fa fa-user"></i>Matematyczne
+															</a>
+													</ul>
+													<!-- TABELA Z .load() -->
+<!--													<div class="btn-group btn-group-justified">-->
+<!--															<a href="subcontent/tab1.html" id="ajaxload"-->
+<!--															   class="btn btn-outline-primary">-->
+<!--																	Zmienne1</a>-->
+<!--															<a href="subcontent/tab2.html" id="ajaxload"-->
+<!--															   class="btn btn-outline-primary">-->
+<!--																	Zmienne2</a>-->
+<!--															<a href="subcontent/tab3.html" id="ajaxload"-->
+<!--															   class="btn btn-outline-primary">-->
+<!--																	Zmienne3</a>-->
+<!--													</div>-->
+													<div id="dynamic">
 
-													<table style="border:1em;">
-															<tr>
-																	<th>Operator</th>
-																	<th>Opis</th>
-																	<th>Przykłady</th>
-															</tr>
-															<tr>
-																	<td colspan="3" class="colspan">Porównania</td>
-															</tr>
-															<tr>
-																	<td>==</td>
-																	<td>jest równe</td>
-																	<td>2==3 wynik: fałsz</td>
-															</tr>
-															<tr>
-																	<td>!==</td>
-																	<td>nie jest równe</td>
-																	<td>2!=3 wynik: prawda</td>
-															</tr>
-															<tr>
-																	<td>&gt;</td>
-																	<td>jest większe</td>
-																	<td>2&gt;3 wynik: fałsz</td>
-															</tr>
-															<tr>
-																	<td>&lt;</td>
-																	<td>jest mniejsze</td>
-																	<td>2&lt;3 wynik: prawda</td>
-															</tr>
-															<tr>
-																	<td>&gt;=</td>
-																	<td>mniejsze lub równe</td>
-																	<td>2&gt;=3 wynik:fałsz</td>
-															</tr>
-															<tr>
-																	<td>&lt;=</td>
-																	<td>większe lub równe</td>
-																	<td>3&lt;=3 wynik: prawda</td>
-															</tr>
-															<tr>
-																	<td colspan="3" class="colspan">Przypisania</td>
-															</tr>
-															<tr>
-																	<td>=</td>
-																	<td>x=y</td>
-																	<td></td>
-															</tr>
-															<tr>
-																	<td>+=</td>
-																	<td>x+=7</td>
-																	<td>x=x+7</td>
-															</tr>
-															<tr>
-																	<td>-=</td>
-																	<td>x-=7</td>
-																	<td>x=x-7</td>
-															</tr>
-															<tr>
-																	<td>*=</td>
-																	<td>x*=y</td>
-																	<td>x=x+y</td>
-															</tr>
-															<tr>
-																	<td>/=</td>
-																	<td>x/=y</td>
-																	<td>x=x/y</td>
-															</tr>
-															<tr>
-																	<td>%=</td>
-																	<td>x%=y</td>
-																	<td>x=x%y</td>
-															</tr>
-															<tr>
-																	<td colspan="3" class="colspan">Logiczne</td>
-															</tr>
-															<tr>
-																	<td>&amp;&amp;</td>
-																	<td>i</td>
-																	<td>true &amp;&amp; true = prawda<br>true $$ false = fałsz</td>
-															</tr>
-															<tr>
-																	<td>||</td>
-																	<td>lub</td>
-																	<td>true || false = prawda</td>
-															</tr>
-															<tr>
-																	<td>!</td>
-																	<td>zaprzeczenie</td>
-																	<td>!true = fałsz</td>
-															</tr>
-													</table>
-													<h1 id="if" class="mt-3">Instrukcja warunkowa</h1>
+													</div>
+
+													<h3 id="if" class="mt-3">Instrukcja warunkowa</h3>
 													<span class="ref">Żródło: <a target="_blank"
 																				 href="http://www.robert.type.pl/szkola/e-14/jak-stosowac-instrukcje-warunkowa-w-java-scripcie/">robert.type.pl</a></span>
 													<p>Do stworzenia prostego skryptu wystarczy użyć kilku (lub więcej) instrukcji, które zostaną wykonane
@@ -308,7 +249,7 @@ document.write(napis);
         }
 &lt;/script></code></pre>
 
-													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="if1" value="Kliknij aby wykonać program"/>
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-sm" type="button" id="if1" value="Kliknij aby wykonać program"/>
 
 													<script>
                                                         function wypisz() {
@@ -343,7 +284,7 @@ document.write(napis);
 			}
 &lt;/script></code></pre>
 
-													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="if2" value="Kliknij aby wykonać program"/>
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-sm" type="button" id="if2" value="Kliknij aby wykonać program"/>
 
 													<script>
                                                         function wypisz() {
@@ -363,7 +304,7 @@ document.write(napis);
 
                                                         document.getElementById('if2').onclick = wypisz
 													</script>
-													<h1 id="for" class="mt-3">Pętla For</h1>
+													<h3 id="for" class="mt-3">Pętla For</h3>
 													<p>Stworzenie skryptu który ma po kolei wykonać kilka operacji jest proste, jak to przedstawiłem w poprzednich
 															lekcjach kursu. Jednak nierzadko zdarza się iż pewną operację lub sekwencję operacji warto byłoby
 															wykonać wielokrotnie, chociażby z tego względu aby zaoszczędzić sobie pisania. Owszem można skopiować
@@ -388,7 +329,7 @@ document.write(napis);
     }
 &lt;/script></code></pre>
 
-													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="for1" value="Kliknij aby wykonać program"/>
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-sm" type="button" id="for1" value="Kliknij aby wykonać program"/>
 													<script>
                                                         function wypisz() {
 
@@ -409,7 +350,7 @@ document.write(napis);
                                                         document.getElementById('for1').onclick = wypisz
 													</script>
 
-													<h2>Program wypisującydaną ilosć kratek:</h2>
+													<h4>Program wypisującydaną ilosć kratek:</h4>
 													<pre><code>&lt;script type= "text/JavaScript">
     var e=prompt("Podaj liczbe f " , "" );
     var f;
@@ -420,7 +361,7 @@ document.write(napis);
     document.write("&lt;br>");
 &lt;/script></code></pre>
 													<!--Guzik2!-->
-													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="for2" value="Kliknij aby wykonać program"/>
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-sm" type="button" id="for2" value="Kliknij aby wykonać program"/>
 													<script>
                                                         function wypisz() {
 
@@ -437,7 +378,7 @@ document.write(napis);
 
                                                         document.getElementById('for2').onclick = wypisz
 													</script>
-													<h2>Program wypisujący trójkąt prostokatny o danej podstawie:</h2>
+													<h4>Program wypisujący trójkąt prostokatny o danej podstawie:</h4>
 													<pre><code>&lt;script type="text/javascript">
     var a=prompt("Podaj liczbe a " , "" );
     var c;
@@ -455,7 +396,7 @@ document.write(napis);
     document.write("&lt;br> &lt;br> &lt;br>");
 &lt;/script></code></pre>
 													<!--Guzik3!-->
-													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="for3" value="Kliknij aby wykonać program"/>
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-sm" type="button" id="for3" value="Kliknij aby wykonać program"/>
 													<script>
                                                         function wypisz() {
 
@@ -482,7 +423,7 @@ document.write(napis);
 
                                                         document.getElementById('for3').onclick = wypisz
 													</script>
-													<h2>Program wypisujący Prostokat o podanych bokach:</h2>
+													<h4>Program wypisujący Prostokat o podanych bokach:</h4>
 													<pre><code>&lt;script type= "text/JavaScript">
     var a=prompt("Podaj liczbe a " , "" );
     var b=prompt("Podaj liczbe b " , "" );
@@ -499,7 +440,7 @@ document.write(napis);
     document.write("&lt;br> &lt;br> &lt;br>");
 &lt;/script></code></pre>
 													<!--Guzik4!-->
-													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="for4" value="Kliknij aby wykonać program"/>
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-sm" type="button" id="for4" value="Kliknij aby wykonać program"/>
 													<script>
                                                         function wypisz() {
 
@@ -550,7 +491,7 @@ document.write(napis);
 
                                                         document.getElementById('for3').onclick = wypisz
 													</script>
-													<h2>Program wypisujący tabliczke mnoczenia danych liczb:</h2>
+													<h4>Program wypisujący tabliczke mnoczenia danych liczb:</h4>
 													<pre><code>&lt;script type= "text/JavaScript">
     var a=prompt("Podaj liczbe a " , "" );
     var b=prompt("Podaj liczbe b " , "" );
@@ -565,7 +506,7 @@ document.write(napis);
     }
 &lt;/script></code></pre>
 													<!--Guzik5!-->
-													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="for5" value="Kliknij aby wykonać program"/>
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-sm" type="button" id="for5" value="Kliknij aby wykonać program"/>
 													<script>
                                                         function wypisz() {
 
@@ -586,7 +527,7 @@ document.write(napis);
 
                                                         document.getElementById('for5').onclick = wypisz
 													</script>
-													<h1 id="while" class="mt-3">Pętla while</h1>
+													<h3 id="while" class="mt-3">Pętla while</h3>
 													<span class="ref">Żródło: <a target="_blank"
 																				 href="http://webmaster.helion.pl/index.php/kjs-cechy-jezyka/kjs-instrukcje/kursjs-petle">webmaster.helion.pl
 		</a></span>
@@ -603,7 +544,7 @@ document.write(napis);
   }
 &lt;/script></code></pre>
 
-													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg"
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-sm"
 														   type="button" id="while1"
 														   value="Kliknij aby wykonać program"/>
 
@@ -642,7 +583,7 @@ document.write(napis);
   }
 &lt;/script></code></pre>
 
-													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="while2" value="Kliknij aby wykonać program"/>
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-sm" type="button" id="while2" value="Kliknij aby wykonać program"/>
 
 													<script>
                                                         function wypisz() {
@@ -669,7 +610,7 @@ document.write(napis);
 
                                                         document.getElementById('while2').onclick = wypisz
 													</script>
-													<h1 id="dowhile" class="mt-3">Pętla do...while</h1>
+													<h3 id="dowhile" class="mt-3">Pętla do...while</h3>
 													<span class="ref">Żródło: <a target="_blank" href="http://www.lomilowka.pl/pliki/jspelte11_pdf-8877.pdf">
 				lomilowka.pl</a></span>
 													<p>Podobnym rodzajem pętli jest pętla typu do ... while. Zasadniczą różnicą między tym typem a poprzednim jest
@@ -702,7 +643,7 @@ document.write(napis);
                         document.write("Przekroczyles ilosc prob zalogowania&lt;br>");
                 }
 &lt;/script></code></pre>
-													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg"
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-sm"
 														   type="button" id="dowhile1"
 														   value="Kliknij aby wykonać program"/>
 
@@ -733,7 +674,7 @@ document.write(napis);
 
                                                         document.getElementById('dowhile1').onclick = wypisz
 													</script>
-													<h1 id="funkcja" class="mt-3">Funkcja</h1>
+													<h3 id="funkcja" class="mt-3">Funkcja</h3>
 													<span class="ref">Żródło: <a target="_blank" href="http://zsoitmilowka.pl/pliki/jsfunkcje_pdf-8878.pdf">
 				zsoitmilowka.pl</a></span>
 													<p>Gdy mąż słyszy od żony idź do sklepu, kup ziemniaki, wówczas zaczyna wykonywać pewien zbiór czynności. Za
@@ -760,7 +701,7 @@ nazwa_funkcji = function() {
     pisz(); //odpalamy powyższą funkcję
     }
 &lt;/script></code></pre>
-													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="fun" value="Kliknij aby wykonać program"/>
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-sm" type="button" id="fun" value="Kliknij aby wykonać program"/>
 													<script>
                                                         function wypisz() {
 
@@ -770,7 +711,7 @@ nazwa_funkcji = function() {
 
                                                         document.getElementById('fun').onclick = wypisz
 													</script>
-													<h1 id="obiekty">Obiekty</h1>
+													<h3 id="obiekty">Obiekty</h3>
 													<span class="ref">Żródło: <a
 															target="_blank"
 															href="http://www.robert.type.pl/szkola/e-14/pracownia-aplikacji-internetowych/javascript/uncategorized/obiekty-w-javascript/">robert.type.pl</a></span>
@@ -852,7 +793,7 @@ document.write(" +ksiazka.sprzedajacy.nazwisko  + " &lt;br>  &lt;br> ");
 }
 &lt;/script></code></pre>
 
-													<input class="btn btn-outline-primary my-2 my-sm-0 btn-lg" type="button" id="obiekt"
+													<input class="btn btn-outline-primary my-2 my-sm-0 btn-sm" type="button" id="obiekt"
 														   value="Kliknij aby wykonać program"/>
 
 													<script>
@@ -909,9 +850,9 @@ document.write(" +ksiazka.sprzedajacy.nazwisko  + " &lt;br>  &lt;br> ");
 													</script>
 											</section>
 									</section>
-									<section class="col-md-3">
-											<section class="bg-light p-5 rounded-lg">
-													<h2>to powinno być menu z boku</h2>
+									<section class="col-lg-3">
+											<section class="bg-light p-3 p-sm-5 rounded-lg">
+													<h3>Scroll spy</h3>
 													<section class="list-group menu">
 															<a class="list-group-item" href="javascript:void();"
 															   onclick="scroll_to('#umieszcanie');">Umieszczanie

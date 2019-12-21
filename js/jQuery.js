@@ -1,3 +1,19 @@
+$(document).ready(function(){
+    $("#dynamic").load('subcontent/tab1.html');
+    $('#ajaxload a').click(function(e){
+        e.preventDefault();
+        var content = $(this)
+        $("#dynamic").fadeOut(250, function(){
+            $("#dynamic").load(content.attr('href'));
+            $('#ajaxload a').removeClass( "active" );
+            content.addClass( "active" );
+        });
+        $("#dynamic").fadeIn(250, function(){
+        });
+    });
+});
+
+
 
 $("#csschanger a[data-theme]").click(function() {
     $("head link#theme").attr("href", $(this).data("theme"));
@@ -36,3 +52,4 @@ function scroll_to(selector) {
     $('html,body').animate({scrollTop: $(selector).offset().top-200}, 1000);
     return false;
 }
+
