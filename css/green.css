@@ -8,6 +8,10 @@ body {
     background-size: cover;
 }
 
+a{
+    color: #054920;
+}
+
 .page-footer {
     color: white;
 }

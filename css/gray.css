@@ -4,9 +4,13 @@ body {
     font-size:calc(12px + 0.3vw);
     background: url("../img/gray.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-
+a {
+    color: #1b2346;
+}
 
 .page-footer {
     color: white;
