@@ -75,7 +75,13 @@ pre {
     border: 15px solid rgba(0, 0, 0, 0);
 }
 
+.carousel-control-prev{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)) center center;
+}
 
+.carousel-control-next{
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)) center center;
+}
 
 @media screen and (max-width: 767px) {
     .sticky-top {

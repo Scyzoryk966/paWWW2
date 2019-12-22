@@ -30,14 +30,12 @@
 													<a class="nav-link" href="kontakt.html">Kontakt</a>
 											</li>
 											<li class="nav-item">
-													<a class="nav-link" href="#">O nas</a>
-											</li>
-											<li class="nav-item">
-											<a class="nav-link" href="#">Dodatki</a>
+													<a class="nav-link" href="media.html">Media</a>
 											</li>
 									</ul>
 									<section class="btn-group" style="margin-right: 30px; margin-left: 30px;">
-											<button id="losuj" type="button"
+											<button id="losuj" type="button" data-toggle="tooltip"
+													title="Losuj styl strony z obecnie dostępnych!"
 													class="btn btn-light my-2 my-sm-0 btn-lg">
 													Losuj styl</button>
 											<button type="button"
@@ -96,8 +94,7 @@
 													<script>
                                                         function wypisz() {
                                                             document.write("Witaj świecie!");
-                                                            document.write("<br><form action=\"../podstrony/write.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
-                                                            document.write("<form action=\"../indexpod.html\"><input type=\"submit\" value=\"Powrót do zadan\" /></form>");
+                                                            document.write("<br><form action=\"index.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
                                                         }
 
                                                         document.getElementById('guzik').onclick = wypisz
@@ -151,13 +148,13 @@ confirm('treść komunikatu');    //okienko confirm</code></pre>
 				robert.type.pl</a></span>
 													<p>W języku JavaScript można wykonywać operacje nie tylko na liczbach, ale także na innych typach wartości.
 															Pełna lista tych typów jest następująca (w nawiasach są nazwy angielskie):</p>
-													<ul>
-															<li>liczby (Number);
-															<li>ciągi znaków (String);
-															<li>wartości logiczne (Boolean);
-															<li>obiekty (Object);
-															<li>tablice (Array);
-													</ul>
+													<ol class="list-group-flush">
+															<li class="list-group-item">liczby (Number);
+															<li class="list-group-item">ciągi znaków (String);
+															<li class="list-group-item">wartości logiczne (Boolean);
+															<li class="list-group-item">obiekty (Object);
+															<li class="list-group-item">tablice (Array);
+													</ol>
 													<p>oraz dwa typy/wartości specjalne: Null i Undefined. Wykonamy nastepujący program:</p>
 
 													<pre><code class="javascript">&lt;script language="javascript">
@@ -178,8 +175,7 @@ document.write(napis);
                                                             var napis = "Nazywasz się " + imie + " " + nazwisko + " i masz " + wiek + " lat.";
                                                             document.write(napis);
 
-                                                            document.write("<br><form action=\"../podstrony/var.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
-                                                            document.write("<form action=\"../indexpod.html\"><input type=\"submit\" value=\"Powrót do zadan\" /></form>");
+                                                            document.write("<br><form action=\"index.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
                                                         }
 
                                                         document.getElementById('var').onclick = wypisz
@@ -262,8 +258,7 @@ document.write(napis);
                                                             }
 
 
-                                                            document.write("<br><form action=\"../podstrony/if.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
-                                                            document.write("<form action=\"../indexpod.html\"><input type=\"submit\" value=\"Powrót do zadan\" /></form>");
+                                                            document.write("<br><form action=\"index.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
                                                         }
 
                                                         document.getElementById('if1').onclick = wypisz
@@ -343,8 +338,7 @@ document.write(napis);
                                                                 }
                                                             }
 
-                                                            document.write("<br><form action=\"../podstrony/for.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
-                                                            document.write("<form action=\"../indexpod.html\"><input type=\"submit\" value=\"Powrót do zadan\" /></form>");
+                                                            document.write("<br><form action=\"index.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
                                                         }
 
                                                         document.getElementById('for1').onclick = wypisz
@@ -372,8 +366,7 @@ document.write(napis);
                                                             }
                                                             document.write("<br>");
 
-                                                            document.write("<br><form action=\"../podstrony/for.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
-                                                            document.write("<form action=\"../indexpod.html\"><input type=\"submit\" value=\"Powrót do zadan\" /></form>");
+                                                            document.write("<br><form action=\"index.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
                                                         }
 
                                                         document.getElementById('for2').onclick = wypisz
@@ -417,8 +410,7 @@ document.write(napis);
                                                             document.write("<Br> <br> <br>");
 
 
-                                                            document.write("<br><form action=\"../podstrony/for.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
-                                                            document.write("<form action=\"../indexpod.html\"><input type=\"submit\" value=\"Powrót do zadan\" /></form>");
+                                                            document.write("<br><form action=\"index.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
                                                         }
 
                                                         document.getElementById('for3').onclick = wypisz
@@ -457,8 +449,7 @@ document.write(napis);
                                                             document.write("<Br> <br> <br>");
 
 
-                                                            document.write("<br><form action=\"../podstrony/for.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
-                                                            document.write("<form action=\"../indexpod.html\"><input type=\"submit\" value=\"Powrót do zadan\" /></form>");
+                                                            document.write("<br><form action=\"index.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
                                                         }
 
                                                         document.getElementById('for4').onclick = wypisz
@@ -485,8 +476,7 @@ document.write(napis);
                                                             document.write("<Br> <br> <br>");
 
 
-                                                            document.write("<br><form action=\"../podstrony/for.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
-                                                            document.write("<form action=\"../indexpod.html\"><input type=\"submit\" value=\"Powrót do zadan\" /></form>");
+                                                            document.write("<br><form action=\"index.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
                                                         }
 
                                                         document.getElementById('for3').onclick = wypisz
@@ -521,8 +511,7 @@ document.write(napis);
                                                                 document.write("<br>")
                                                             }
 
-                                                            document.write("<br><form action=\"../podstrony/for.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
-                                                            document.write("<form action=\"../indexpod.html\"><input type=\"submit\" value=\"Powrót do zadan\" /></form>");
+                                                            document.write("<br><form action=\"index.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
                                                         }
 
                                                         document.getElementById('for5').onclick = wypisz
@@ -556,8 +545,7 @@ document.write(napis);
                                                                 a++
                                                             }
 
-                                                            document.write("<br><form action=\"../podstrony/while.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
-                                                            document.write("<form action=\"../indexpod.html\"><input type=\"submit\" value=\"Powrót do zadan\" /></form>");
+                                                            document.write("<br><form action=\"index.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
                                                         }
 
                                                         document.getElementById('while1').onclick = wypisz
@@ -604,8 +592,7 @@ document.write(napis);
                                                                 document.write("A jest równe B");
                                                             }
 
-                                                            document.write("<br><form action=\"../podstrony/while.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
-                                                            document.write("<form action=\"../indexpod.html\"><input type=\"submit\" value=\"Powrót do zadan\" /></form>");
+                                                            document.write("<br><form action=\"index.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
                                                         }
 
                                                         document.getElementById('while2').onclick = wypisz
@@ -668,8 +655,7 @@ document.write(napis);
                                                                 document.write("Przekroczyles ilosc prob zalogowania<br>");
                                                             }
 
-                                                            document.write("<br><form action=\"../podstrony/dowhile.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
-                                                            document.write("<form action=\"../indexpod.html\"><input type=\"submit\" value=\"Powrót do zadan\" /></form>");
+                                                            document.write("<br><form action=\"index.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
                                                         }
 
                                                         document.getElementById('dowhile1').onclick = wypisz
@@ -750,7 +736,7 @@ nazwa_funkcji = function() {
 													<pre><code>&lt;script type= "text/JavaScript">
 function Biblioteka(dzial, tytol, autor, ilosc , wydawnictwo , sprzedajacy) {
 this.dzial=dzial;
-this.tytol=tytol;
+this.tytul=tytul;
 this.autor=autor;
 this.ilosc=ilosc;
 this.wydawnictwo=wydawnictwo;
@@ -801,7 +787,7 @@ document.write(" +ksiazka.sprzedajacy.nazwisko  + " &lt;br>  &lt;br> ");
 
                                                             function Biblioteka(dzial, tytol, autor, ilosc, wydawnictwo, sprzedajacy) {
                                                                 this.dzial = dzial;
-                                                                this.tytol = tytol;
+                                                                this.tytol = tytul;
                                                                 this.autor = autor;
                                                                 this.ilosc = ilosc;
                                                                 this.wydawnictwo = wydawnictwo;
@@ -842,45 +828,43 @@ document.write(" +ksiazka.sprzedajacy.nazwisko  + " &lt;br>  &lt;br> ");
                                                             }
 
 
-                                                            document.write("<br><form action=\"../podstrony/obiekty.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
-                                                            document.write("<form action=\"../indexpod.html\"><input type=\"submit\" value=\"Powrót do zadan\" /></form>");
+                                                            document.write("<br><form action=\"index.html\"><input type=\"submit\" value=\"Powrót do artykulu\" /></form>");
                                                         }
 
                                                         document.getElementById('obiekt').onclick = wypisz
 													</script>
 											</section>
 									</section>
-									<section class="col-lg-3">
-											<section class="bg-light p-3 p-sm-5 rounded-lg">
-													<h3>Scroll spy</h3>
-													<section class="list-group menu">
-															<a class="list-group-item" href="javascript:void();"
-															   onclick="scroll_to('#umieszcanie');">Umieszczanie
-																	skryptu w pliku HTML.</a>
-															<a class="list-group-item" href="javascript:void();"
-															   onclick="scroll_to('#write');">Instrukcja document
-																	.write</a>
-															<a class="list-group-item" href="javascript:void();"
-															   onclick="scroll_to('#dialog');">Okna dialogowe.</a>
-															<a class="list-group-item" href="javascript:void();"
-															   onclick="scroll_to('#zmienne');">Zmienne.</a>
-															<a class="list-group-item" href="javascript:void();"
-															   onclick="scroll_to('#operatory');">Operatory.</a>
-															<a class="list-group-item" href="javascript:void();"
-															   onclick="scroll_to('#if');">Instrukcja warunkowa.</a>
-															<a class="list-group-item" href="javascript:void();"
-															   onclick="scroll_to('#for');"">Pętla for.</a>
-															<a class="list-group-item" href="javascript:void();"
-															   onclick="scroll_to('#while');">Pętla while.</a>
-															<a class="list-group-item" href="javascript:void();"
-															   onclick="scroll_to('#dowhile');">Pętla do..while.</a>
-															<a class="list-group-item" href="javascript:void();"
-															   onclick="scroll_to('#funkcja');">Funkcja</a>
-															<a class="list-group-item" href="javascript:void();"
-															   onclick="scroll_to('#obiekty');">Obiekty</a>
+											<section class="col-lg-3 position-sticky">
+													<section class="bg-light p-3 p-sm-5 rounded-lg">
+															<section class="list-group menu">
+																	<a class="list-group-item" href="javascript:void();"
+																	   onclick="scroll_to('#umieszcanie');">Umieszczanie
+																			skryptu w pliku HTML.</a>
+																	<a class="list-group-item" href="javascript:void();"
+																	   onclick="scroll_to('#write');">Instrukcja document
+																			.write</a>
+																	<a class="list-group-item" href="javascript:void();"
+																	   onclick="scroll_to('#dialog');">Okna dialogowe.</a>
+																	<a class="list-group-item" href="javascript:void();"
+																	   onclick="scroll_to('#zmienne');">Zmienne.</a>
+																	<a class="list-group-item" href="javascript:void();"
+																	   onclick="scroll_to('#operatory');">Operatory.</a>
+																	<a class="list-group-item" href="javascript:void();"
+																	   onclick="scroll_to('#if');">Instrukcja warunkowa.</a>
+																	<a class="list-group-item" href="javascript:void();"
+																	   onclick="scroll_to('#for');"">Pętla for.</a>
+																	<a class="list-group-item" href="javascript:void();"
+																	   onclick="scroll_to('#while');">Pętla while.</a>
+																	<a class="list-group-item" href="javascript:void();"
+																	   onclick="scroll_to('#dowhile');">Pętla do..while.</a>
+																	<a class="list-group-item" href="javascript:void();"
+																	   onclick="scroll_to('#funkcja');">Funkcja</a>
+																	<a class="list-group-item" href="javascript:void();"
+																	   onclick="scroll_to('#obiekty');">Obiekty</a>
+															</section>
 													</section>
 											</section>
-									</section>
 							</section>
 											<section class="col-md-12">
 													<footer class="page-footer font-small">
@@ -892,12 +876,11 @@ document.write(" +ksiazka.sprzedajacy.nazwisko  + " &lt;br>  &lt;br> ");
 							</section>
 
 			</section>
-	</section>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="js/jquery.min.js"></script>
-	<script src="js/cookies.js"></script>
 	<script src="js/jQuery.js"></script>
+	<script src="js/cookies.js"></script>
 </body>
 </html>

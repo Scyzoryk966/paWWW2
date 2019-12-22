@@ -14,7 +14,6 @@ $(document).ready(function(){
 });
 
 
-
 $("#csschanger a[data-theme]").click(function() {
     $("head link#theme").attr("href", $(this).data("theme"));
     $.cookie("styleSheet", $(this).data("theme"), { expires : 365 });
@@ -52,4 +51,5 @@ function scroll_to(selector) {
     $('html,body').animate({scrollTop: $(selector).offset().top-200}, 1000);
     return false;
 }
+
 
