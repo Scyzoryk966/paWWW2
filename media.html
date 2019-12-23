@@ -323,7 +323,7 @@
                 animationEnabled: true,
                 data: [{
                     type: "pie",
-                    startAngle: 40,
+                    startAngle: 220,
                     toolTipContent: "<b>{label}</b>: {y}%",
                     showInLegend: "true",
                     legendText: "{label}",
@@ -337,35 +337,13 @@
                         { y: 6.53, label: "Windows 8.1" },
                         { y: 2.45, label: "Linux" },
                         { y: 3.32, label: "Mac OS X 10.12" },
-                        { y: 4.03, label: "Others" }
+                        { y: 4.03, label: "Inne" }
                     ]
                 }]
             };
             $("#chartContainer").CanvasJSChart(options);
 
         });
-        // Open the Modal
-        function openModal() {
-            document.getElementById("myModal").style.display = "block";
-        }
-
-        // Close the Modal
-        function closeModal() {
-            document.getElementById("myModal").style.display = "none";
-        }
-
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        // Next/previous controls
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        // Thumbnail image controls
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
 
         function showSlides(n) {
             var i;
